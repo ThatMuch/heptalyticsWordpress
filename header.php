@@ -29,22 +29,6 @@ $template = str_replace(array('page-', '.php'), '', $template);
 	<link rel="stylesheet" href="<?php echo get_template_directory_uri() ?>/inc/assets/css/normalize.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 	<!-- Google Tag Manager -->
-	<script>
-		(function(w, d, s, l, i) {
-			w[l] = w[l] || [];
-			w[l].push({
-				'gtm.start': new Date().getTime(),
-				event: 'gtm.js'
-			});
-			var f = d.getElementsByTagName(s)[0],
-				j = d.createElement(s),
-				dl = l != 'dataLayer' ? '&l=' + l : '';
-			j.async = true;
-			j.src =
-				'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
-			f.parentNode.insertBefore(j, f);
-		})(window, document, 'script', 'dataLayer', 'GTM-W4SVBGG');
-	</script>
 	<!-- End Google Tag Manager -->
 	<!--=== WP HEAD ===-->
 	<?php wp_head(); ?>
@@ -81,8 +65,8 @@ $template = str_replace(array('page-', '.php'), '', $template);
 					?>
 				</div>
 				<div>
-					<a class="btn btn__primary" href="<?php echo site_url(); ?>/offre-usurpation/">
-						Découvrez nos offres
+					<a class="btn btn__primary" href="<?php echo site_url(); ?>">
+						Demander une démo
 					</a>
 					<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
 						<span class="navbar-toggler-icon"></span>

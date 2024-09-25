@@ -71,7 +71,6 @@ $wp_queryPosts = new WP_Query(array(
 	<div class="blog__list">
 		<?php if ($wp_queryPosts->have_posts()) : ?>
 			<?php while ($wp_queryPosts->have_posts()) : $wp_queryPosts->the_post(); ?>
-				<?php $categories = get_the_category(); ?>
 				<?php get_template_part('templates/wp', 'post'); ?>
 			<?php endwhile; ?>
 			<?php wp_reset_postdata(); ?>

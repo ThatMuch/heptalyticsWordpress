@@ -1,3 +1,4 @@
+	<?php $categories = get_the_category(); ?>
 	<div class="blog__item">
 		<a href="<?php the_permalink() ?>" class="blog__item__image">
 			<?php the_post_thumbnail('medium'); ?>

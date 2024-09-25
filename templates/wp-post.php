@@ -4,7 +4,6 @@
 		</a>
 		<div class="blog__item__content">
 			<div class="blog__item__author">
-				<span><?php the_author(); ?></span>
 				<span><?php echo get_the_date(); ?></span>
 			</div>
 			<a href="<?php the_permalink() ?>">

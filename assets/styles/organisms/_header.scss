@@ -13,14 +13,9 @@
     -webkit-box-shadow: 0px 16px 32px rgba(25, 86, 168, 0.1);
     box-shadow: 0px 16px 32px rgba(25, 86, 168, 0.1);
     background: #fff;
-    padding: 0;
-    .container {
-        @include breakpoint(mobile) {
-            //justify-content: center;
-        }
-    }
+
     .navbar-brand {
-        height: 4rem;
+        height: 2.5rem;
 
         img {
             width: 100%;
@@ -34,21 +29,9 @@
     .nav-link {
         margin: 0 30px;
         isolation: isolate;
-        color: $color-tertiary;
         font-size: 0.85rem;
-        font-family: $text-ff;
         letter-spacing: 0.5px;
         text-transform: uppercase;
-        @include breakpoint(tablet) {
-            &:hover {
-                cursor: pointer;
-                -webkit-box-shadow: 0px 16px 32px rgba(25, 86, 168, 0.1);
-                box-shadow: 0px 16px 32px rgba(25, 86, 168, 0.1);
-                border-radius: 7px;
-                background: #ffffff;
-                color: var(--orange);
-            }
-        }
     }
 
     .dropdown-menu {

@@ -6,7 +6,7 @@
  *
  * @author      ThatMuch
  * @version     0.1.0
- * @since       idProtect_1.0.0
+ * @since       heptalytics_1.0.0
  *
  *
  */
@@ -61,7 +61,7 @@ $font_formats = ['ttf'];
 /*==================================================================================
   3.0 GOOGLE TAG MANAGER
 ==================================================================================*/
-// embed the GTM-scripts into head and body => idProtect_gtm()
+// embed the GTM-scripts into head and body => heptalytics_gtm()
 // add your GTM_id (for example 'GTM-ABC1234') or leave empty to not enqueue any GTM-script
 $GTM_id = '';
 
@@ -70,7 +70,7 @@ $GTM_id = '';
 /*==================================================================================
   4.0 OPEN TAG IMAGE
 ==================================================================================*/
-// open graph tags are returned by default => idProtect_ogtags()
+// open graph tags are returned by default => heptalytics_ogtags()
 // add your og-image credentials here or leave ['active', false] to not emped an og-image
 $ogimg = [
 	['active', false],
@@ -101,75 +101,75 @@ add_action('init', 'stanlee_register_theme_menus');
 function stanlee_widgets_init()
 {
 	register_sidebar(array(
-		'name'          => esc_html__('Sidebar par defaut', 'IdProtect'),
+		'name'          => esc_html__('Sidebar par defaut', 'heptalytics'),
 		'id'            => 'sidebar-default',
-		'description'   => esc_html__('Add widgets here.', 'IdProtect'),
+		'description'   => esc_html__('Add widgets here.', 'heptalytics'),
 		'before_widget' => '<aside id="%1$s" class="%2$s">',
 		'after_widget'  => '</aside>',
 		'before_title'  => '<h2>',
 		'after_title'   => '</h2>',
 	));
 	register_sidebar(array(
-		'name'          => esc_html__('Sidebar particuliers', 'IdProtect'),
+		'name'          => esc_html__('Sidebar particuliers', 'heptalytics'),
 		'id'            => 'sidebar-particuliers',
-		'description'   => esc_html__('Add widgets here.', 'IdProtect'),
+		'description'   => esc_html__('Add widgets here.', 'heptalytics'),
 		'before_widget' => '<aside id="%1$s" class="%2$s article__sidebar sidebar-part">',
 		'after_widget'  => '</aside>',
 		'before_title'  => '<h2>',
 		'after_title'   => '</h2>',
 	));
 	register_sidebar(array(
-		'name'          => esc_html__('Sidebar professionnels', 'IdProtect'),
+		'name'          => esc_html__('Sidebar professionnels', 'heptalytics'),
 		'id'            => 'sidebar-professionnels',
-		'description'   => esc_html__('Add widgets here.', 'IdProtect'),
+		'description'   => esc_html__('Add widgets here.', 'heptalytics'),
 		'before_widget' => '<aside id="%1$s" class="%2$s article__sidebar sidebar-pro">',
 		'after_widget'  => '</aside>',
 		'before_title'  => '<h2>',
 		'after_title'   => '</h2>',
 	));
 	register_sidebar(array(
-		'name'          => esc_html__('Sidebar products', 'IdProtect'),
+		'name'          => esc_html__('Sidebar products', 'heptalytics'),
 		'id'            => 'sidebar-products',
-		'description'   => esc_html__('Add widgets here.', 'IdProtect'),
+		'description'   => esc_html__('Add widgets here.', 'heptalytics'),
 		'before_widget' => '<aside id="%1$s" class="%2$s article__sidebar sidebar-products">',
 		'after_widget'  => '</aside>',
 		'before_title'  => '<h2>',
 		'after_title'   => '</h2>',
 	));
 	register_sidebar(array(
-		'name'          => esc_html__('Footer Logos', 'IdProtect'),
+		'name'          => esc_html__('Footer Logos', 'heptalytics'),
 		'id'            => 'footer-1',
-		'description'   => esc_html__('Add widgets here.', 'IdProtect'),
+		'description'   => esc_html__('Add widgets here.', 'heptalytics'),
 		'before_widget' => '<div id="%1$s" class=" widget %2$s">',
 		'after_widget'  => '</div>',
 		'before_title'  => '<h4 class="widget-title">',
 		'after_title'   => '</h4>',
 	));
 	register_sidebar(array(
-		'name'          => esc_html__('Footer Partenaires', 'IdProtect'),
+		'name'          => esc_html__('Footer Partenaires', 'heptalytics'),
 		'id'            => 'footer-partenaires',
-		'description'   => esc_html__('Add widgets here.', 'IdProtect'),
+		'description'   => esc_html__('Add widgets here.', 'heptalytics'),
 		'before_widget' => '<div id="%1$s" class=" widget footer__area__sponso %2$s">',
 		'after_widget'  => '</div>'
 	));
 	register_sidebar(array(
-		'name'          => esc_html__('Footer Particulier', 'IdProtect'),
+		'name'          => esc_html__('Footer Particulier', 'heptalytics'),
 		'id'            => 'footer-par',
-		'description'   => esc_html__('Add widgets here.', 'IdProtect'),
+		'description'   => esc_html__('Add widgets here.', 'heptalytics'),
 		'before_widget' => '<div id="%1$s" class="widget  %2$s">',
 		'after_widget'  => '</div>',
 	));
 	register_sidebar(array(
-		'name'          => esc_html__('Footer Professionnels', 'IdProtect'),
+		'name'          => esc_html__('Footer Professionnels', 'heptalytics'),
 		'id'            => 'footer-pro',
-		'description'   => esc_html__('Add widgets here.', 'IdProtect'),
+		'description'   => esc_html__('Add widgets here.', 'heptalytics'),
 		'before_widget' => '<div id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</div>',
 	));
 	register_sidebar(array(
-		'name'          => esc_html__('Footer A propos', 'IdProtect'),
+		'name'          => esc_html__('Footer A propos', 'heptalytics'),
 		'id'            => 'footer-about',
-		'description'   => esc_html__('Add widgets here.', 'IdProtect'),
+		'description'   => esc_html__('Add widgets here.', 'heptalytics'),
 		'before_widget' => '<div id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</div>',
 	));

@@ -4,8 +4,8 @@
  * Register Block Types
  *
  * @package WordPress
- * @subpackage idProtect
- * @since idProtect 1.0.0
+ * @subpackage heptalytics
+ * @since heptalytics 1.0.0
  */
 
 $icon = '<svg width="40" height="40" viewBox="0 0 40 40" fill="#152235" xmlns="http://www.w3.org/2000/svg">

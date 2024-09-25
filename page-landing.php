@@ -4,8 +4,8 @@
  * Template Name: Landing page
  *
  * @package WordPress
- * @subpackage idProtect
- * @since idProtect 3.0
+ * @subpackage heptalytics
+ * @since heptalytics 3.0
  */
 ?>
 

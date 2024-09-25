@@ -5,7 +5,7 @@
  *
  * @author      ThatMuch
  * @version     0.1.0
- * @since       idProtect_1.0.0
+ * @since       heptalytics_1.0.0
  *
  *
  */
@@ -42,7 +42,7 @@
 /––––––––––––––––---––––––––*/
 // enqueues  sctipts and styles (optional typekit embed)
 // » https://developer.wordpress.org/reference/functions/wp_enqueue_script/
-function idProtect_enqueue()
+function heptalytics_enqueue()
 {
   // fontawesome cdn
   wp_enqueue_style('fontawesome', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css');
@@ -54,7 +54,7 @@ function idProtect_enqueue()
   // styles
   wp_enqueue_style('owl-carousel', get_template_directory_uri() . '/inc/assets/css/owl.carousel.min.css', false, null);
   wp_enqueue_style('owl-carousel', get_template_directory_uri() . '/inc/assets/css/owl.theme.default.min.css', false, null);
-  wp_enqueue_style('ID_Protect_/styles', get_template_directory_uri() . '/assets/styles/style.min.css', false, null);
+  wp_enqueue_style('heptalytics_/styles', get_template_directory_uri() . '/assets/styles/style.min.css', false, null);
   // Typekit
   global $typekit_id;
   if ($typekit_id) :
@@ -64,8 +64,8 @@ function idProtect_enqueue()
   wp_enqueue_script('html5hiv', get_template_directory_uri() . '/inc/assets/js/html5.js', array(), '3.7.0', false);
   wp_script_add_data('html5hiv', 'conditional', 'lt IE 9');
   // scripts
-  wp_register_script('ID_Protect_/scripts', get_template_directory_uri() . '/assets/scripts/all.min.js', false, array('jquery'), true);
-  wp_enqueue_script('ID_Protect_/scripts');
+  wp_register_script('heptalytics_/scripts', get_template_directory_uri() . '/assets/scripts/all.min.js', false, array('jquery'), true);
+  wp_enqueue_script('heptalytics_/scripts');
   // load bootstrap js
   wp_enqueue_script('wp-bootstrap-starter-popper', get_template_directory_uri() . '/inc/assets/js/popper.min.js', array(), '', true);
   wp_enqueue_script('wp-bootstrap-starter-bootstrapjs', get_template_directory_uri() . '/inc/assets/js/bootstrap.min.js', array(), '', true);
@@ -74,7 +74,7 @@ function idProtect_enqueue()
   wp_enqueue_script('owl-carousel', get_template_directory_uri() . '/inc/assets/js/owl.carousel.min.js', array(), '', true);
 }
 
-add_action('wp_enqueue_scripts', 'idProtect_enqueue');
+add_action('wp_enqueue_scripts', 'heptalytics_enqueue');
 
 // Admin Style
 function my_custom_admin_stylesheet()
@@ -107,7 +107,7 @@ function register_navwalker()
 add_action('after_setup_theme', 'register_navwalker');
 /* 1.2 THEME SUPPORT
 /––––––––––––––––––––––––*/
-function idProtect_theme_support()
+function heptalytics_theme_support()
 {
 
   // Enable plugins to manage the document title
@@ -128,7 +128,7 @@ function idProtect_theme_support()
   // => http://codex.wordpress.org/Function_Reference/add_image_size
   add_theme_support('post-thumbnails');
 }
-add_action('after_setup_theme', 'idProtect_theme_support');
+add_action('after_setup_theme', 'heptalytics_theme_support');
 
 
 /*==================================================================================
@@ -140,7 +140,7 @@ add_action('after_setup_theme', 'idProtect_theme_support');
 /––––––––––––––––––––––––*/
 // remove unused stuff from wp_head()
 
-function idProtect_wphead_cleanup()
+function heptalytics_wphead_cleanup()
 {
   // remove the generator meta tag
   remove_action('wp_head', 'wp_generator');
@@ -167,14 +167,14 @@ function idProtect_wphead_cleanup()
   remove_action('wp_head', 'wp_oembed_add_discovery_links', 10);
   remove_action('wp_head', 'wp_oembed_add_host_js');
 }
-add_action('after_setup_theme', 'idProtect_wphead_cleanup');
+add_action('after_setup_theme', 'heptalytics_wphead_cleanup');
 
 
 /* 2.2 LOAG OG-TAGS
 /––––––––––––––––––––––––*/
 // loads open graph tags » http://ogp.me/
-// use 'idProtect_load_ogtags(true)' to also display the og:image tag
-function idProtect_ogtags()
+// use 'heptalytics_load_ogtags(true)' to also display the og:image tag
+function heptalytics_ogtags()
 {
   echo '
   <meta property="og:title" content="' . get_bloginfo('name') . ' - ' . get_the_title() . '">
@@ -198,7 +198,7 @@ function idProtect_ogtags()
 /––––––––––––––––––––––––*/
 // preloads fonts that are hosted locally into the page header
 // add your desired fonts and font-types into $font_names and $font_formats
-function idProtect_preload_fonts()
+function heptalytics_preload_fonts()
 {
   // font_names and font_formats are defined in 'functions-setup.php'
   global $preload_fonts;

@@ -3,7 +3,7 @@
 /**
  * @author      ThatMuch
  * @version     0.1.0
- * @since       idProtect_1.0.0
+ * @since       heptalytics_1.0.0
  */
 
 // get the template type of the page
@@ -17,9 +17,9 @@ $template = str_replace(array('page-', '.php'), '', $template);
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=5, initial-scale=1">
 	<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
-	<?php idProtect_gtm('head') ?>
+	<?php heptalytics_gtm('head') ?>
 	<!--=== OPEN-GRAPH TAGS ===-->
-	<?php idProtect_ogtags() ?>
+	<?php heptalytics_ogtags() ?>
 	<!--=== PRELOAD FONTS ===-->
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -55,7 +55,7 @@ $template = str_replace(array('page-', '.php'), '', $template);
 	<!-- Google Tag Manager (noscript) -->
 	<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W4SVBGG" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 	<!-- End Google Tag Manager (noscript) -->
-	<?php idProtect_gtm('body') ?>
+	<?php heptalytics_gtm('body') ?>
 
 	<?php
 	$custom_logo_id = get_theme_mod('custom_logo');
@@ -66,7 +66,7 @@ $template = str_replace(array('page-', '.php'), '', $template);
 		<div class="container align-items-center <?= $template === "landing" ? "justify-content-center" : "" ?>">
 			<a class="navbar-brand" href="<?php echo site_url(); ?>">
 				<img src="<?php if ($image[0]) : echo $image[0];
-							else : echo get_template_directory_uri() ?>/assets/images/stanlee_logo_texte.png<? endif; ?>" alt="ID Protect">
+							else : echo get_template_directory_uri() ?>/assets/images/stanlee_logo_texte.png<? endif; ?>" alt="Heptalytics">
 			</a>
 			<?php if ($template !== "landing") : ?>
 				<div class="collapse navbar-collapse" id="navbar">

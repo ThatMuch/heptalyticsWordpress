@@ -4,8 +4,8 @@
  * Template Name: Témoignages
  *
  * @package WordPress
- * @subpackage idProtect
- * @since idProtect 3.0
+ * @subpackage heptalytics
+ * @since heptalytics 3.0
  */
 
 $titleIsHidden = get_field('hide_title');

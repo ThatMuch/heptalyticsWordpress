@@ -1,12 +1,12 @@
 @charset "UTF-8";
-/* Main CSS File Merges all .scss files (in the desired order) before they're processed by gulp. To add vendors, use gulp-vendors.json. @author      ThatMuch @version     0.1.0 @since       idProtect_1.0.0.0 */
+/* Main CSS File Merges all .scss files (in the desired order) before they're processed by gulp. To add vendors, use gulp-vendors.json. @author      ThatMuch @version     0.1.0 @since       heptalytics_1.0.0.0 */
 /*================================================================================== PRESETS/ ==================================================================================*/
-/** @author      ThatMuch @version     0.1.0 @since       idProtect_1.0.0.0 */
+/** @author      ThatMuch @version     0.1.0 @since       heptalytics_1.0.0.0 */
 /* Responsive */
 /* HEADINGS
 /––––––––––––––––––––––––*/
-/** TYPOGRAPHY Contains all fonts that need to be hosted locally. » http://google-webfonts-helper.herokuapp.com/fonts (=> make sure paths start with 'fonts/' instead of '../fonts') @author      ThatMuch @version     0.1.0 @since       idProtect_1.0.0.0 */
-/** Variables Contains re-usable variables like colors, sizes, breakpoints etc. Normally, you don't have to change anything in essentials.css and general.css because you'll define the basic-values here. @author     ThatMuch @version    0.1.0 @since      idProtect_1.0.0 */
+/** TYPOGRAPHY Contains all fonts that need to be hosted locally. » http://google-webfonts-helper.herokuapp.com/fonts (=> make sure paths start with 'fonts/' instead of '../fonts') @author      ThatMuch @version     0.1.0 @since       heptalytics_1.0.0.0 */
+/** Variables Contains re-usable variables like colors, sizes, breakpoints etc. Normally, you don't have to change anything in essentials.css and general.css because you'll define the basic-values here. @author     ThatMuch @version    0.1.0 @since      heptalytics_1.0.0 */
 /*================================================================================== SCALING ==================================================================================*/
 /*================================================================================== COLORS ==================================================================================*/
 /* Presets
@@ -28,11 +28,11 @@
 /––––––––––––––––––––––––*/
 /*================================================================================== TRANSITIONS ==================================================================================*/
 /*================================================================================== SHADOWS ==================================================================================*/
-/** @author      ThatMuch @version     0.1.0 @since       idProtect_1.0.0.0 */
-/** @author      ThatMuch @version     0.1.0 @since       idProtect_1.0.0.0 */
+/** @author      ThatMuch @version     0.1.0 @since       heptalytics_1.0.0.0 */
+/** @author      ThatMuch @version     0.1.0 @since       heptalytics_1.0.0.0 */
 /*================================================================================== ATOMIC DESIGN/ ==================================================================================*/
 /*=====  Atoms  ======*/
-/** @author      ThatMuch @version     0.1.0 @since       idProtect_1.0.0.0 */
+/** @author      ThatMuch @version     0.1.0 @since       heptalytics_1.0.0.0 */
 .btn, .single_add_to_cart_button, .wc-block-cart__submit-button, .wc-block-components-totals-coupon__button { -ms-flex-align: center; -webkit-box-align: center; align-items: center; background: #FFFFFF; border-radius: 7px; color: var(--blue); display: -ms-inline-flexbox; display: -webkit-inline-box; display: inline-flex; font-family: "Raleway", sans-serif; font-size: 13px; font-weight: 700; letter-spacing: 0.5px; padding: 10px 15px; text-align: center; text-transform: uppercase; }
 
 .btn.btn__primary, .single_add_to_cart_button.btn__primary, .wc-block-cart__submit-button.btn__primary, .wc-block-components-totals-coupon__button.btn__primary { background: var(--blue); color: #fff; }
@@ -75,7 +75,7 @@
 
 .btn__orange.white:hover { background: #fff; color: #171C60; }
 
-/** @author      ThatMuch @version     0.1.0 @since       idProtect_1.0.0.0 */
+/** @author      ThatMuch @version     0.1.0 @since       heptalytics_1.0.0.0 */
 h1, h2, h3, h4, h5, h6 { font-family: "Rubik", sans-serif; }
 
 h1, .h1 { font-size: 3rem; line-height: 1.25; font-weight: bold; }

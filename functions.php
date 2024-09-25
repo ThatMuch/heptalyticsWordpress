@@ -8,7 +8,7 @@
  *
  * @author      ThatMuch
  * @version     0.1.0
- * @since       idProtect_1.0.0
+ * @since       heptalytics_1.0.0
  *
  */
 

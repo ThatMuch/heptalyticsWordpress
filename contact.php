@@ -4,8 +4,8 @@
  * Template Name: ContactCustom
  *
  * @package WordPress
- * @subpackage idProtect
- * @since idProtect 1.0
+ * @subpackage heptalytics
+ * @since heptalytics 1.0
  */
 //
 get_header(); ?>

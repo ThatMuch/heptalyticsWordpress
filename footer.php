@@ -3,7 +3,7 @@
 /**
  * @author      ThatMuch
  * @version     0.1.0
- * @since       idProtect_1.0.0
+ * @since       heptalytics_1.0.0
  */
 ?>
 <?php
@@ -74,7 +74,7 @@ $template = str_replace(array('page-', '.php'), '', $template);
 <div class="footer__area">
 	<div class="row d-flex justify-content-between">
 		<div class="footer__area__menu d-md-flex  justify-content-<?php echo $template !== "landing" ? "between" : "center" ?> align-items-center">
-			<img class="footer__area__logo" src="<?= esc_url(get_template_directory_uri() . '/logo-IDPROTECT_footer.png'); ?>" alt="ID Protect logo">
+			<img class="footer__area__logo" src="<?= esc_url(get_template_directory_uri() . '/logo-heptalytics_footer.png'); ?>" alt="Heptalytics logo">
 			<?php if ($template !== "landing") : ?>
 				<div class="d-md-flex align-center">
 					<?php wp_nav_menu(array('theme_location' => 'submenu')); ?>
@@ -87,7 +87,7 @@ $template = str_replace(array('page-', '.php'), '', $template);
 		<div></div>
 		<div>
 			<?php $year = date('Y'); ?>
-			<p class="text-center"> © <?php echo $year ?> ID PROTECT tout droits réservés</p>
+			<p class="text-center"> © <?php echo $year ?> Heptalytics tout droits réservés</p>
 		</div>
 		<a class="footer__area__credits" href="https://thatmuch.fr" target="_blank" rel="noopener noreferrer">
 			<img src="<?php echo get_template_directory_uri() ?>/assets/images/THATMUCH_Logo_White.png" alt="logo that much">

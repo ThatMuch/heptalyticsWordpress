@@ -281,6 +281,8 @@ function wp_trim_all_excerpt($text)
     $text = get_the_content('');
     $text = apply_filters('the_content', $text);
     $text = str_replace(']]>', ']]>', $text);
+    // remove br tags
+    $text = str_replace('/<br/>', '', $text);
   }
   $text = strip_shortcodes($text);
   $text = strip_tags($text);

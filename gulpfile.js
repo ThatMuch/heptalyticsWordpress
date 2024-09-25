@@ -54,7 +54,7 @@ gulp.task("scripts", function () {
 });
 gulp.task("watch", function () {
 	browserSync.init({
-		proxy: "http://localhost:10074",
+		proxy: "http://localhost:10096",
 	});
 	gulp.watch("assets/styles/**/*.scss", gulp.series("styles"));
 	gulp.watch("assets/styles/admin/*.scss", gulp.series("styles_admin"));

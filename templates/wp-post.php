@@ -7,7 +7,7 @@
 				<span><?php echo get_the_date(); ?></span>
 			</div>
 			<a href="<?php the_permalink() ?>">
-				<h3><?php the_title(); ?></h3>
+				<h4><?php the_title(); ?></h4>
 				<p><?php the_excerpt() ?></p>
 			</a>
 			<?php if (!empty($categories)) : ?>

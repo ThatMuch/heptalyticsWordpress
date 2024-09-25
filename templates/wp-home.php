@@ -47,9 +47,11 @@ $wp_queryPosts = new WP_Query(array(
 			<div class="blog__featured">
 				<?php the_post_thumbnail('large', array('class' => 'blog__image')); ?>
 				<div class="blog__featured__text">
-					<h2><?php the_title(); ?></h2>
-					<p class="blog__date"><?php echo get_the_date(); ?></p>
-					<?php the_excerpt(); ?>
+					<a href="<?php the_permalink() ?>">
+						<h2><?php the_title(); ?></h2>
+						<p class="blog__date"><?php echo get_the_date(); ?></p>
+						<?php the_excerpt(); ?>
+					</a>
 					<?php if (!empty($categories)) : ?>
 						<div class="d-flex gap-2">
 							<?php foreach ($categories as $category) : ?>
@@ -65,8 +67,7 @@ $wp_queryPosts = new WP_Query(array(
 		<?php endwhile; ?>
 		<?php wp_reset_postdata(); ?>
 	<?php endif; ?>
-	<h2 class="blog__title">Tous les articles</h2>
-
+	<h3 class="blog__title mb-3">Tous les articles</h3>
 	<div class="blog__list">
 		<?php if ($wp_queryPosts->have_posts()) : ?>
 			<?php while ($wp_queryPosts->have_posts()) : $wp_queryPosts->the_post(); ?>

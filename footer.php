@@ -90,7 +90,7 @@ $template = str_replace(array('page-', '.php'), '', $template);
 			<p class="text-center"> © <?php echo $year ?> Heptalytics tout droits réservés</p>
 		</div>
 		<a class="footer__area__credits" href="https://thatmuch.fr" target="_blank" rel="noopener noreferrer">
-			<img src="<?php echo get_template_directory_uri() ?>/assets/images/THATMUCH_Logo_White.png" alt="logo that much">
+			<img data-src="<?php echo get_template_directory_uri() ?>/assets/images/THATMUCH_Logo_White.png" alt="logo that much">
 		</a>
 	</div>
 </div>

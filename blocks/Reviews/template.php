@@ -38,7 +38,7 @@ $testimony_query = new WP_Query($args);
                             <div class="stars">
                                 <?php
                                 for ($i = 0; $i < $note; $i++) { ?>
-                                    <img src="<?= esc_url(get_template_directory_uri() . '/blocks/Reviews/assets/star.svg') ?>" alt="star">
+                                    <img data-src="<?= esc_url(get_template_directory_uri() . '/blocks/Reviews/assets/star.svg') ?>" alt="star">
                                 <?php } ?>
                             </div>
                             <span class="digit-14"><?= esc_html($note); ?>/5</span>

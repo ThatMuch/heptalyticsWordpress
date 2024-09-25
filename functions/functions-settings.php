@@ -91,6 +91,33 @@ function my_custom_login_stylesheet()
   wp_enqueue_style('custom-login', get_stylesheet_directory_uri() . '/assets/styles/admin/login.min.css');
 }
 
+add_filter('the_content', 'my_lazyload_content_images');
+add_filter('widget_text', 'my_lazyload_content_images');
+add_filter('wp_get_attachment_image_attributes', 'my_lazyload_attachments', 10, 2);
+
+// Replace the image attributes in Post/Page Content
+function my_lazyload_content_images($content)
+{
+  $content = preg_replace('/(<img.+)(src)/Ui', '$1data-$2', $content);
+  $content = preg_replace('/(<img.+)(srcset)/Ui', '$1data-$2', $content);
+
+  return $content;
+}
+
+// Replace the image attributes in Post Listing, Related Posts, etc.
+function my_lazyload_attachments($atts, $attachment)
+{
+  $atts['data-src'] = $atts['src'];
+  unset($atts['src']);
+
+  if (isset($atts['srcset'])) {
+    $atts['data-srcset'] = $atts['srcset'];
+    unset($atts['srcset']);
+  }
+
+  return $atts;
+}
+
 //This loads the function above on the login page
 add_action('login_enqueue_scripts', 'my_custom_login_stylesheet');
 // function register_navwalker(){

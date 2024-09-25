@@ -23,17 +23,17 @@ $size = 'medium'; // (thumbnail, medium, large, full or custom size)
 						<li class="slide">
 							<?php if ($image['description']) : ?>
 								<a href="<?php echo esc_url($image['description']); ?>" target="_blank">
-									<img src="<?php echo esc_url($image['sizes']['medium']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
+									<img data-src="<?php echo esc_url($image['sizes']['medium']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
 								</a>
 							<?php else : ?>
-								<img src="<?php echo esc_url($image['sizes']['medium']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
+								<img data-src="<?php echo esc_url($image['sizes']['medium']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
 							<?php endif; ?>
 						</li>
 					<?php endforeach; ?>
 					<?php foreach ($data['gallery'] as $image) : ?>
 						<li class="slide">
 							<a href="<?php echo esc_url($image['description']); ?>" target="_blank">
-								<img src="<?php echo esc_url($image['sizes']['medium']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
+								<img data-src="<?php echo esc_url($image['sizes']['medium']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
 							</a>
 						</li>
 					<?php endforeach; ?>

@@ -9,3 +9,16 @@ img {
     max-width: 100%;
     height: auto;
 }
+
+img[data-src] {
+    opacity: 0;
+    transition-duration: $transition_slow;
+
+    //transition: opacity $transition_slow ease-in-out;
+    will-change: opacity;
+}
+
+/* appear animation */
+img[data-src][src] {
+    opacity: 1;
+}

@@ -27,7 +27,7 @@ $template = str_replace(array('page-', '.php'), '', $template);
 	<link rel="stylesheet" href="<?php echo get_template_directory_uri() ?>/inc/assets/css/owl.theme.default.min.css">
 	<link rel="stylesheet" href="<?php echo get_template_directory_uri() ?>/inc/assets/css/bootstrap.min.css">
 	<link rel="stylesheet" href="<?php echo get_template_directory_uri() ?>/inc/assets/css/normalize.css">
-
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 	<!-- Google Tag Manager -->
 	<script>
 		(function(w, d, s, l, i) {
@@ -63,8 +63,8 @@ $template = str_replace(array('page-', '.php'), '', $template);
 	<nav class="header__area navbar sticky-top navbar-expand-lg">
 		<div class="container align-items-center <?= $template === "landing" ? "justify-content-center" : "" ?>">
 			<a class="navbar-brand" href="<?php echo site_url(); ?>">
-				<img src="<?php if ($image[0]) : echo $image[0];
-							else : echo get_template_directory_uri() ?>/assets/images/stanlee_logo_texte.png<? endif; ?>" alt="Heptalytics">
+				<img data-src="<?php if ($image[0]) : echo $image[0];
+								else : echo get_template_directory_uri() ?>/assets/images/stanlee_logo_texte.png<? endif; ?>" alt="Heptalytics">
 			</a>
 			<?php if ($template !== "landing") : ?>
 				<div class="collapse navbar-collapse" id="navbar">

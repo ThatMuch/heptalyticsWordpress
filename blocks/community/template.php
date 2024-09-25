@@ -19,7 +19,7 @@ $class_name = $args['class_name'];
 				<div class="community__image">
 					<?php $image = $data['image'];  ?>
 					<?php if (!empty($image)) : ?>
-						<img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
+						<img data-src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
 					<?php endif; ?>
 				</div>
 			</div>
@@ -30,7 +30,7 @@ $class_name = $args['class_name'];
 							<?php while (have_rows('card_1')) : the_row(); ?>
 								<?php $image = $data['card_1']['icon'];  ?>
 								<?php if (!empty($image)) : ?>
-									<img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
+									<img data-src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
 								<?php endif; ?>
 								<h3><?php the_sub_field('text'); ?></p>
 								<?php endwhile; ?>
@@ -45,7 +45,7 @@ $class_name = $args['class_name'];
 								<?php $link = get_sub_field('link'); ?>
 								<?php if ($link) : ?>
 									<a class="btn btn__white text__orange" href="<?php echo esc_url($link['url']); ?>" target="<?php echo esc_attr($link['target']); ?>"><?php echo esc_html($link['title']); ?>
-										<img src="<?php echo get_template_directory_uri() ?>/assets/images/arrow-right-orange.svg" alt="Flèche vers la droite">
+										<img data-src="<?php echo get_template_directory_uri() ?>/assets/images/arrow-right-orange.svg" alt="Flèche vers la droite">
 									</a>
 								<?php endif; ?>
 							<?php endwhile; ?>

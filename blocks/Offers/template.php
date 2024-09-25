@@ -85,7 +85,7 @@ $the_query = new WP_Query($argsQuery);
 												<?php foreach ($item['option'] as $option) : ?>
 													<div class="d-flex gap-1 align-items-center mb-2">
 														<?php if ($option['text']) : ?>
-															<img src="<?php echo get_template_directory_uri() ?>/assets/images/icon_<?php echo $option['active'] ? "check" : "cancel" ?>.svg" alt="Check">
+															<img data-src="<?php echo get_template_directory_uri() ?>/assets/images/icon_<?php echo $option['active'] ? "check" : "cancel" ?>.svg" alt="Check">
 															<span class="text"><?php echo $option['text']; ?></span>
 														<?php endif; ?>
 													</div>
@@ -99,7 +99,7 @@ $the_query = new WP_Query($argsQuery);
 						<div class="price__footer">
 							<?php if ($link) : ?>
 								<a class="btn btn__white" href="<?php echo esc_url($link['url']); ?>" target="<?php echo esc_attr($link['target']); ?>"><?php echo esc_html($link['title']); ?>
-									<img src="<?php echo get_template_directory_uri() ?>/assets/images/arrow-right.svg" alt="Flèche vers la droite">
+									<img data-src="<?php echo get_template_directory_uri() ?>/assets/images/arrow-right.svg" alt="Flèche vers la droite">
 								</a>
 							<?php endif; ?>
 						</div>

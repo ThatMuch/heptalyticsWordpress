@@ -35,7 +35,7 @@
     -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 16px 16px 0px 0px;
-    background: linear-gradient(278.49deg, #1956a8 0%, #171c60 88.22%);
+    background: $color-dark;
     padding: 0.625rem 1.875rem var(--Spacing-0, 0rem) 1.875rem;
     color: #a3bbdc;
     text-align: center;
@@ -59,11 +59,9 @@
         a {
             color: #fff;
             font-style: normal;
-            font-weight: 700;
             font-size: 0.875rem;
             line-height: 1.625rem;
             text-decoration: none;
-            text-transform: uppercase;
         }
     }
 
@@ -73,9 +71,9 @@
 
     &__bottom {
         margin-top: 15px;
-        border-top: 1px solid #5e89c2;
+        border-top: 1px solid rgba(255, 255, 255, 0.25);
         padding: 15px 0;
-        color: #5e89c2;
+        color: rgba(255, 255, 255, 0.25);
 
         p {
             margin-bottom: 0;

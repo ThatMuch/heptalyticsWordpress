@@ -8,3 +8,31 @@
  * @since       heptalytics_1.0.0.0
  *
  */
+
+@font-face {
+    font-style: normal;
+    font-weight: 300;
+    src: url("../fonts/PlusJakartaSans-Light.ttf") format("truetype");
+    font-family: "PlusJakartaSans";
+}
+
+@font-face {
+    font-style: normal;
+    font-weight: 400;
+    src: url("../fonts/PlusJakartaSans-Regular.ttf") format("truetype");
+    font-family: "PlusJakartaSans";
+}
+
+@font-face {
+    font-style: normal;
+    font-weight: 500;
+    src: url("../fonts/PlusJakartaSans-Medium.ttf") format("truetype");
+    font-family: "PlusJakartaSans";
+}
+
+@font-face {
+    font-style: normal;
+    font-weight: 700;
+    src: url("../fonts/PlusJakartaSans-Bold.ttf") format("truetype");
+    font-family: "PlusJakartaSans";
+}

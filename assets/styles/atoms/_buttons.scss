@@ -23,7 +23,7 @@
     color: $color-primary;
     font-weight: 700;
     font-size: 13px;
-    font-family: "Raleway", sans-serif;
+    font-family: $text-ff;
     letter-spacing: 0.5px;
     text-align: center;
     text-transform: uppercase;
@@ -75,7 +75,7 @@ body:not(.woocommerce-block-theme-has-button-styles) .wc-block-components-button
     padding: 10px 15px;
     color: $color-primary;
     font-weight: 700;
-    font-family: "Raleway", sans-serif;
+    font-family: $text-ff;
     letter-spacing: 0.5px;
     text-align: center;
     text-transform: uppercase;
@@ -102,7 +102,7 @@ body:not(.woocommerce-block-theme-has-button-styles) .wc-block-components-button
     border-radius: 7px;
     padding: 13px 12px;
     color: $color-secondary;
-    font-family: "Raleway", sans-serif;
+    font-family: $text-ff;
     letter-spacing: 0.5px;
     text-align: center;
     text-transform: uppercase;

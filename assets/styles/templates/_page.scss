@@ -11,21 +11,11 @@
  */
 
 //=> templates/wp-page.php
-main#page {
-    section {
-        .element.teaser {
-            width: 100%;
-            max-width: 100%;
-            height: 25rem;
-            padding: 0;
-
-            img,
-            .modernizr-of {
-                width: 100%;
-                height: 100%;
-                background-size: cover; // modernizr
-                object-fit: cover;
-            }
-        }
+.section__area .container {
+    max-width: 1120px;
+}
+.page__area {
+    .container {
+        max-width: 800px;
     }
 }

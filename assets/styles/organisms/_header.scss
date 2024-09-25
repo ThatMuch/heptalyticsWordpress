@@ -36,7 +36,7 @@
         isolation: isolate;
         color: $color-tertiary;
         font-size: 0.85rem;
-        font-family: "Raleway", sans-serif;
+        font-family: $text-ff;
         letter-spacing: 0.5px;
         text-transform: uppercase;
         @include breakpoint(tablet) {
@@ -112,7 +112,7 @@
                 margin: 12px 0;
                 color: $color-tertiary;
                 font-size: 0.85rem;
-                font-family: "Raleway";
+                font-family: $text-ff;
                 letter-spacing: 0.5px;
                 text-decoration: none;
                 &:hover {
@@ -126,7 +126,7 @@
         margin-bottom: 1rem;
         padding: 0;
         color: $color-tertiary;
-        font-family: "Raleway", sans-serif;
+        font-family: $text-ff;
         &:hover,
         &.active {
             cursor: pointer;

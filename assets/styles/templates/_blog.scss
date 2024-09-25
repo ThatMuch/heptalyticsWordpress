@@ -7,54 +7,67 @@
  */
 //=> templates/wp-home.php
 
-.blog, .archive, .search {
-    .content-area {
-        display: flex;
-        justify-content: center;
-        gap: 50px;
-
-        @include breakpoint(mobile) {
-            padding: 15px;
-            flex-wrap: wrap;
+.blog {
+    &__list {
+        grid-row-gap: 1.5rem;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-column-gap: 1.5rem;
+        @include breakpoint(tablet) {
+            grid-template-columns: 1fr 1fr;
+            padding-bottom: 1rem;
+            overflow: scroll;
+            grid-row-gap: 3rem;
+        }
+        @include breakpoint(laptop) {
+            grid-template-rows: auto;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-row-gap: 4rem;
         }
     }
 
-    .article__content {
-        display: grid;
-        gap: 15px;
-        grid-template-columns: repeat(minmax(200px, 1fr), auto-fit);
-        margin-bottom: 1rem;
-        align-items: center;
-        max-width: 100%;
-
-        @include breakpoint(tablet) {
-            grid-template-columns: 200px 1fr;
-        }
-
-
-        .thumbnail {
-            height: 200px;
-            background-color: $color-grey1;
-
+    &__item {
+        transition: box-shadow 0.2s;
+        height: 100%;
+        overflow: hidden;
+        text-decoration: none;
+        &__image {
+            display: block;
+            position: relative;
+            border-radius: 0.75rem;
+            padding-top: 60%;
+            width: 100%;
+            overflow: hidden;
             img {
+                position: absolute;
+                inset: 0%;
                 width: 100%;
                 height: 100%;
                 object-fit: cover;
             }
         }
-    }
-}
-
-.pagination {
-    padding: 15px 0;
-    display: flex;
-    justify-content: center;
-}
-
-.widget-area {
-    ul, li {
-        padding: 0;
-        margin: 0;
-        list-style: none;
+        &__author {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            opacity: 0.8;
+            margin-bottom: 1rem;
+            font-size: 0.8125rem;
+        }
+        &__content {
+            display: flex;
+            flex: 1;
+            flex-direction: column;
+            justify-content: flex-start;
+            padding: 1.5rem;
+            text-decoration: none;
+            h3 {
+                font-size: 1.125rem;
+                line-height: 1.5;
+            }
+            a {
+                color: $color-black;
+            }
+        }
     }
 }

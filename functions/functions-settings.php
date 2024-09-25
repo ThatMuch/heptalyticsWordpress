@@ -284,8 +284,8 @@ function wp_trim_all_excerpt($text)
   }
   $text = strip_shortcodes($text);
   $text = strip_tags($text);
-  $excerpt_length = apply_filters('excerpt_length', 30);
-  $excerpt_more = apply_filters('excerpt_more', ' ... ' . '<a class="read-more" href="' . get_permalink($post->ID) . '">' . 'Plus' . '</a>');
+  $excerpt_length = apply_filters('excerpt_length', 10);
+  $excerpt_more = apply_filters('excerpt_more', ' ... ');
   $words = explode(' ', $text, $excerpt_length + 1);
   if (count($words) > $excerpt_length) {
     array_pop($words);
@@ -298,3 +298,59 @@ function wp_trim_all_excerpt($text)
 }
 remove_filter('get_the_excerpt', 'wp_trim_excerpt');
 add_filter('get_the_excerpt', 'wp_trim_all_excerpt');
+
+function load_more_posts_callback()
+{
+  $page = $_POST['page'];
+  $posts_per_page = $_POST['posts_per_page'];
+  $offset = 1 + (($page - 1) * $posts_per_page); // Calculate the offset
+
+  $args = array(
+    'posts_per_page' => $posts_per_page,
+    'offset' => $offset,
+    'order' => 'DESC',
+  );
+
+  $the_query = new WP_Query($args);
+
+  if ($the_query->have_posts()) :
+    while ($the_query->have_posts()) : $the_query->the_post();
+      $categories = get_the_category();
+?>
+      <div class="blog__item">
+        <a href="<?php the_permalink() ?>" class="blog__item__image">
+          <?php the_post_thumbnail('medium'); ?>
+        </a>
+        <div class="blog__item__content">
+          <div class="blog__item__author">
+            <span><?php the_author(); ?></span>
+            <span><?php echo get_the_date(); ?></span>
+          </div>
+          <a href="<?php the_permalink() ?>">
+            <h3><?php the_title(); ?></h3>
+            <p><?php the_excerpt() ?></p>
+          </a>
+          <?php if (!empty($categories)) : ?>
+            <div class="d-flex gap-2">
+              <?php foreach ($categories as $category) : ?>
+                <a class="badge rounded-pill bg-light text-dark" href="<?php echo site_url();  ?>/category/<?php echo $category->slug; ?>">
+                  <?php echo $category->name; ?>
+                </a>
+              <?php endforeach; ?>
+            </div>
+          <?php endif; ?>
+        </div>
+      </div>
+<?php
+    endwhile;
+    wp_reset_postdata();
+  else :
+    // No more posts found
+    echo '';
+  endif;
+
+  die(); // Always die in AJAX callbacks
+}
+
+add_action('wp_ajax_load_more_posts', 'load_more_posts_callback'); // For logged in users
+add_action('wp_ajax_nopriv_load_more_posts', 'load_more_posts_callback'); // For not logged in users

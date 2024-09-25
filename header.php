@@ -23,7 +23,6 @@ $template = str_replace(array('page-', '.php'), '', $template);
 	<!--=== PRELOAD FONTS ===-->
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@500;700&family=Rubik:wght@500;700;800&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="<?php echo get_template_directory_uri() ?>/inc/assets/css/owl.carousel.min.css">
 	<link rel="stylesheet" href="<?php echo get_template_directory_uri() ?>/inc/assets/css/owl.theme.default.min.css">
 	<link rel="stylesheet" href="<?php echo get_template_directory_uri() ?>/inc/assets/css/bootstrap.min.css">
@@ -53,7 +52,6 @@ $template = str_replace(array('page-', '.php'), '', $template);
 
 <body <?php body_class(); ?>>
 	<!-- Google Tag Manager (noscript) -->
-	<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W4SVBGG" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 	<!-- End Google Tag Manager (noscript) -->
 	<?php heptalytics_gtm('body') ?>
 

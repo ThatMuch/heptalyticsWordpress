@@ -73,6 +73,19 @@ function heptalytics_enqueue()
   wp_enqueue_script('wp-bootstrap-starter-skip-link-focus-fix', get_template_directory_uri() . '/inc/assets/js/skip-link-focus-fix.min.js', array(), '20151215', true);
   wp_enqueue_script('owl-carousel', get_template_directory_uri() . '/inc/assets/js/owl.carousel.min.js', array(), '', true);
 }
+// GSAP
+function wpb_adding_scripts()
+{
+
+  wp_register_script('gsap', 'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js', array(), '1.0', true);
+
+  wp_register_script('gsap-settings', get_stylesheet_directory_uri() . '/gsap-options.js', array('gsap'), '1.0', true);
+
+  wp_enqueue_script('gsap'); // This is probably not needed since below we are enqueueing the gsap-settings file with has a dependency on the gsap script, so it should enqueue both
+  wp_enqueue_script('gsap-settings');
+}
+
+add_action('wp_enqueue_scripts', 'wpb_adding_scripts');
 
 add_action('wp_enqueue_scripts', 'heptalytics_enqueue');
 

@@ -1,0 +1,30 @@
+{
+	"name": "layering",
+	"title": "Layering Sections",
+	"description": "Une section pour afficher des sections qui se superposent au scroll",
+	"style": [
+		"file:./style.css"
+	],
+	"script": "file:./script.js",
+	"category": "theme",
+	"keywords": [
+		"Heptalytics",
+		"Section",
+		"Animation"
+	],
+	"acf": {
+		"mode": "preview",
+		"renderTemplate": "./block.php"
+	},
+	"align": "full",
+	"supports": {
+		"align": false,
+		"anchor": false,
+		"alignContent": false,
+		"color": {
+			"text": false,
+			"background": true,
+			"link": false
+		}
+	}
+}

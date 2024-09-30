@@ -1,0 +1,69 @@
+.pinnedSections__wrapper {
+    position: relative;
+    margin-top: 50px;
+    padding: 90px 0;
+    height: auto;
+
+    .pinnedSections {
+        position: relative;
+        width: 100%;
+        height: 100vh;
+
+        .pinnedSections__item {
+            display: grid;
+            position: absolute;
+            grid-template-columns: 1fr 1fr;
+            justify-content: center;
+            gap: 1.5rem;
+            border: none;
+            border-radius: 10px;
+            background: linear-gradient(180deg, #2d2d50 -12.32%, #131327 110.05%);
+            padding: 4.75rem;
+            width: 100%;
+            height: 100%;
+            color: #fff;
+            @media (max-width: 768px) {
+                display: block;
+                padding: 2rem;
+            }
+
+            .pinnedSections__feature {
+                color: var(--Primary, #3c98ed);
+                font-weight: 700;
+                line-height: var(--Line-Height-Headline-H4, 1.6875rem);
+                /* 192.857% */
+                letter-spacing: var(--4, 0.25rem);
+                text-transform: uppercase;
+            }
+
+            .pinnedSections__title {
+                font-style: normal;
+                font-weight: 600;
+                font-size: var(--Scale-XL, 2rem);
+                line-height: var(--Line-Height-Headline-H2, 2.5rem);
+                letter-spacing: var(--2, 0.125rem);
+            }
+
+            .pinnedSections__desc {
+                font-style: normal;
+                font-weight: 400;
+                font-size: var(--Scale-M, 1.125rem);
+                line-height: var(--Line-Height-Body-B1, 1.6875rem);
+                ul {
+                    margin-top: 3rem;
+                }
+            }
+            img {
+                display: block;
+                margin: 0 auto;
+                width: 80%;
+                @media (min-width: 451px) {
+                    width: 55%;
+                }
+                @media screen and (min-width: 992px) {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

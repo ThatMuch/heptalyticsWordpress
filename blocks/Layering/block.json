@@ -1,17 +1,19 @@
 {
-	"name": "blog",
-	"title": "Actualités",
-	"description": "Une section pour afficher les dernières actualités",
+	"name": "layering",
+	"title": "Layering Sections",
+	"description": "Une section pour afficher des sections qui se superposent au scroll",
 	"style": [
 		"file:./style.css"
 	],
+	"script": "file:./script.js",
 	"category": "theme",
 	"keywords": [
 		"Heptalytics",
-		"Blog"
+		"Section",
+		"Animation"
 	],
 	"acf": {
-		"mode": "edit",
+		"mode": "preview",
 		"renderTemplate": "./block.php"
 	},
 	"align": "full",

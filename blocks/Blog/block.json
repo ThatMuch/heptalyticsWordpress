@@ -11,7 +11,7 @@
 		"Blog"
 	],
 	"acf": {
-		"mode": "preview",
+		"mode": "edit",
 		"renderTemplate": "./block.php"
 	},
 	"align": "full",

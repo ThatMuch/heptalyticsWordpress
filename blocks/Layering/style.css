@@ -42,6 +42,7 @@
                 font-size: var(--Scale-XL, 2rem);
                 line-height: var(--Line-Height-Headline-H2, 2.5rem);
                 letter-spacing: var(--2, 0.125rem);
+                color: #fff;
             }
 
             .pinnedSections__desc {

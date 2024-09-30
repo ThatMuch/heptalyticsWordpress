@@ -37,9 +37,7 @@ $color-secondary-darker: color.adjust($color-secondary, $lightness: -7%);
 $color-tertiary: #7ad6c6;
 $color-tertiary-darker: color.adjust($color-tertiary, $lightness: 7%);
 $color-black: #131327;
-$color-dark: #343a40;
-$color-grey2: #495057;
-$color-grey1: #868e96;
+$color-dark: #333333;
 $color-grey: #f2f2f2;
 $color-light: #f2f7ff;
 
@@ -52,6 +50,7 @@ $text-fz: 1em;
 $text-scale-ratio: 1.2;
 $text-ff: "PlusJakartaSans", sans-serif;
 $text-c: $color-dark;
+$heading-c: $color-black;
 $text-fw: 400;
 $text-lh: 1.5;
 

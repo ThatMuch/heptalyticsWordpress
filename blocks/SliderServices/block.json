@@ -1,0 +1,30 @@
+{
+	"name": "sliderServices",
+	"title": "Slider services",
+	"description": "Une section pour afficher des services dans un slider",
+	"style": [
+		"file:./style.css"
+	],
+	"script": "file:./script.js",
+	"category": "theme",
+	"keywords": [
+		"Heptalytics",
+		"Slider",
+		"Carrousel"
+	],
+	"acf": {
+		"mode": "preview",
+		"renderTemplate": "./block.php"
+	},
+	"align": "full",
+	"supports": {
+		"align": false,
+		"anchor": false,
+		"alignContent": false,
+		"color": {
+			"text": false,
+			"background": true,
+			"link": false
+		}
+	}
+}

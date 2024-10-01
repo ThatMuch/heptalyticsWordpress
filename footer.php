@@ -72,16 +72,18 @@ $template = str_replace(array('page-', '.php'), '', $template);
 
 </div>
 <div class="footer__area">
-	<div class="row d-flex justify-content-between">
-		<div class="footer__area__menu d-md-flex  justify-content-<?php echo $template !== "landing" ? "between" : "center" ?> align-items-center">
-			<img class="footer__area__logo" src="<?= esc_url(get_template_directory_uri() . '/assets/images/logo-heptalytics_footer.png'); ?>" alt="Heptalytics logo">
-			<?php if ($template !== "landing") : ?>
-				<div class="d-md-flex align-center">
-					<?php wp_nav_menu(array('theme_location' => 'submenu')); ?>
-				</div>
-				<div></div>
-			<?php endif; ?>
+	<div class="footer__area__menu d-md-flex  justify-content-<?php echo $template !== "landing" ? "between" : "center" ?> align-items-center">
+		<div class="col-sm-3">
+			<img class="footer__area__logo" data-src="<?php if ($image[0]) : echo $image[0];
+														else : echo get_template_directory_uri() ?>/assets/images/stanlee_logo_texte.png<? endif; ?>" alt="Heptalytics">
+			<p><?php echo get_theme_mod('header_title', 'Le meilleur outil pour analyser vos données') ?></p>
 		</div>
+		<?php if ($template !== "landing") : ?>
+			<div class="d-md-flex align-center">
+				<?php wp_nav_menu(array('theme_location' => 'submenu')); ?>
+			</div>
+			<div></div>
+		<?php endif; ?>
 	</div>
 	<div class="footer__area__bottom d-md-flex justify-content-between">
 		<div></div>

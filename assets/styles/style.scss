@@ -77,6 +77,9 @@ html {
 }
 
 body {
+    background-image: url(../images/heptagone.svg);
+    background-position: 0 100%;
+    background-repeat: no-repeat;
     background-color: $color-light;
     color: $text-c;
     font-size: 1rem;

@@ -30,10 +30,10 @@ $template = str_replace(array('page-', '.php'), '', $template);
 														else : echo get_template_directory_uri() ?>/assets/images/stanlee_logo_texte.png<? endif; ?>" alt="Heptalytics">
 			<p><?php echo get_theme_mod('header_title', 'Le meilleur outil pour analyser vos données') ?></p>
 		</div>
-		<div class="col-sm-3">
+		<div class="col-sm-4">
 			<?php wp_nav_menu(array('theme_location' => 'submenu')); ?>
 		</div>
-		<div class="col-sm-3">
+		<div class="col-sm-2">
 			<?php if (have_rows('rs', 'options') && $template !== "landing") : ?>
 				<ul class="footer__rs">
 					<?php while (have_rows('rs', 'options')) : the_row(); ?>

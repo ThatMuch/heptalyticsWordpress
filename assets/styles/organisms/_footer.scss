@@ -44,11 +44,18 @@
         text-align: inherit;
     }
     .menu-footer-container .menu {
-        display: grid;
-        grid-template-rows: repeat(3, 1fr);
-        grid-template-columns: repeat(2, 1fr);
-        grid-column-gap: 24px;
-        grid-row-gap: 0px;
+        &-item {
+            @include breakpoint(phablet) {
+                text-align: left;
+            }
+        }
+        @include breakpoint(laptop) {
+            display: grid;
+            grid-template-rows: repeat(3, 1fr);
+            grid-template-columns: repeat(2, 1fr);
+            grid-column-gap: 24px;
+            grid-row-gap: 0px;
+        }
     }
     ul,
     li {

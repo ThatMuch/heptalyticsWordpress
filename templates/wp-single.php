@@ -52,7 +52,6 @@ $wp_queryRelated = new WP_Query(array(
 			<h2>Related Posts</h2>
 			<div class="blog__list">
 				<?php while ($wp_queryRelated->have_posts()) : $wp_queryRelated->the_post(); ?>
-					<?php $categories = get_the_category(); ?>
 					<?php get_template_part('templates/wp', 'post'); ?>
 				<?php endwhile; ?>
 				<?php wp_reset_postdata(); ?>

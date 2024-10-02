@@ -25,8 +25,8 @@ function showImagesOnView(images) {
 
     if (isOnView) {
       i.setAttribute('src',i.dataset.src);
-      if (i.getAttribute('data-srcset')) {
-        i.setAttribute('srcset',i.dataset.srcset);
+		if (i.getAttribute("data-srcset") || i.getAttribute("data-data-srcset")) {
+          i.setAttribute("srcset", i.dataset.srcset);
       }
     }
   }

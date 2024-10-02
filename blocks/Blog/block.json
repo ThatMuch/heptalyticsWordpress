@@ -11,18 +11,8 @@
 		"Blog"
 	],
 	"acf": {
-		"mode": "edit",
+		"mode": "preview",
 		"renderTemplate": "./block.php"
 	},
-	"align": "full",
-	"supports": {
-		"align": false,
-		"anchor": false,
-		"alignContent": false,
-		"color": {
-			"text": false,
-			"background": true,
-			"link": false
-		}
-	}
+	"align": "full"
 }

@@ -5,3 +5,13 @@
  * @since       heptalytics_1.0.0.0
  *
  */
+
+.badge {
+    border-radius: var(--8, 0.5rem);
+    padding: var(--8, 0.5rem) var(--16, 1rem);
+    text-transform: uppercase;
+    &-light {
+        background: var(--Neutral-100_FFFFFF, #fff);
+        color: $color-primary !important;
+    }
+}

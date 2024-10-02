@@ -26,7 +26,7 @@
 
 /*=====  Atoms  ======*/
 // @import "./atoms/_alerts";
-// @import "./atoms/_badges";
+@import "./atoms/_badges";
 @import "./atoms/_buttons";
 
 // @import "./atoms/_dividers";
@@ -35,7 +35,7 @@
 @import "./atoms/_images";
 // @import "./atoms/_inputs";
 // @import "./atoms/_labels";
-// @import "./atoms/_links";
+@import "./atoms/_links";
 // @import "./atoms/_lists";
 
 /*=====  Molecules  ======*/
@@ -77,14 +77,10 @@ html {
 }
 
 body {
+    background-color: $color-light;
     color: $text-c;
     font-size: 1rem;
     font-family: $text-ff;
-}
-
-a {
-    color: $color-tertiary;
-    text-decoration: none;
 }
 
 *:focus-visible {

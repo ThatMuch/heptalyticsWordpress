@@ -109,8 +109,8 @@ add_filter('wp_get_attachment_image_attributes', 'my_lazyload_attachments', 10, 
 // Replace the image attributes in Post/Page Content
 function my_lazyload_content_images($content)
 {
-  $content = preg_replace('/(<img.+)(src)/Ui', '$1data-$2', $content);
-  $content = preg_replace('/(<img.+)(srcset)/Ui', '$1data-$2', $content);
+  $content = preg_replace('/(<img[^>]*?)(?<!data-)src=/Ui', '$1data-src=', $content);
+  $content = preg_replace('/(<img[^>]*?)(?<!data-)srcset=/Ui', '$1data-srcset=', $content);
 
   return $content;
 }

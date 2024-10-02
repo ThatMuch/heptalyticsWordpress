@@ -88,6 +88,9 @@ li.menu-item-gtranslate {
         font-size: 0.85rem;
         letter-spacing: 0.5px;
         text-transform: uppercase;
+        &.active {
+            color: $color-primary;
+        }
     }
 
     .dropdown-menu {
@@ -170,7 +173,6 @@ li.menu-item-gtranslate {
         &.active {
             cursor: pointer;
             background-color: $color-light;
-            color: $color-secondary;
         }
     }
 

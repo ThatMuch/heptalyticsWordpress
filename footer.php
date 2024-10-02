@@ -21,54 +21,6 @@ $template = str_replace(array('page-', '.php'), '', $template);
 <?php endif; ?>
 
 </div><!-- #content -->
-<?php if (have_rows('rs', 'options') && $template !== "landing") : ?>
-	<ul class="footer__rs">
-		<?php while (have_rows('rs', 'options')) : the_row(); ?>
-			<?php if (get_sub_field('facebook')) : ?>
-				<li class="footer__rs__item">
-					<a href="<?php the_sub_field('facebook'); ?>" target="_blank" aria-label="Facebook">
-						<i class="fab fa-facebook" aria-hidden="true"></i>
-					</a>
-				</li>
-			<?php endif; ?>
-			<?php if (get_sub_field('twitter')) : ?>
-				<li class="footer__rs__item">
-					<a href="<?php the_sub_field('twitter'); ?>" target="_blank" aria-label="Twitter">
-						<i class="fab fa-twitter" aria-hidden="true"></i>
-					</a>
-				</li>
-			<?php endif; ?>
-			<?php if (get_sub_field('instagram')) : ?>
-				<li class="footer__rs__item">
-					<a href="<?php the_sub_field('instagram'); ?>" target="_blank" aria-label="Instagram">
-						<i class="fab fa-instagram" aria-hidden="true"></i>
-					</a>
-				</li>
-			<?php endif; ?>
-			<?php if (get_sub_field('google')) : ?>
-				<li class="footer__rs__item">
-					<a href="<?php the_sub_field('google'); ?>" target="_blank" aria-label="Google">
-						<i class="fab fa-google" aria-hidden="true"></i>
-					</a>
-				</li>
-			<?php endif; ?>
-			<?php if (get_sub_field('linkedin')) : ?>
-				<li class="footer__rs__item">
-					<a href="<?php the_sub_field('linkedin'); ?>" target="_blank" aria-label="Linkedin">
-						<i class="fab fa-linkedin" aria-hidden="true"></i>
-					</a>
-				</li>
-			<?php endif; ?>
-			<?php if (get_sub_field('youtube')) : ?>
-				<li class="footer__rs__item">
-					<a href="<?php the_sub_field('youtube'); ?>" target="_blank" aria-label="Youtube">
-						<i class="fab fa-youtube" aria-hidden="true"></i>
-					</a>
-				</li>
-			<?php endif; ?>
-		<?php endwhile; ?>
-	</ul>
-<?php endif; ?>
 
 </div>
 <div class="footer__area">
@@ -78,12 +30,59 @@ $template = str_replace(array('page-', '.php'), '', $template);
 														else : echo get_template_directory_uri() ?>/assets/images/stanlee_logo_texte.png<? endif; ?>" alt="Heptalytics">
 			<p><?php echo get_theme_mod('header_title', 'Le meilleur outil pour analyser vos données') ?></p>
 		</div>
-		<?php if ($template !== "landing") : ?>
-			<div class="d-md-flex align-center">
-				<?php wp_nav_menu(array('theme_location' => 'submenu')); ?>
-			</div>
-			<div></div>
-		<?php endif; ?>
+		<div class="col-sm-3">
+			<?php wp_nav_menu(array('theme_location' => 'submenu')); ?>
+		</div>
+		<div class="col-sm-3">
+			<?php if (have_rows('rs', 'options') && $template !== "landing") : ?>
+				<ul class="footer__rs">
+					<?php while (have_rows('rs', 'options')) : the_row(); ?>
+						<?php if (get_sub_field('facebook')) : ?>
+							<li class="footer__rs__item">
+								<a href="<?php the_sub_field('facebook'); ?>" target="_blank" aria-label="Facebook">
+									<i class="fa-brands fa-facebook-f" aria-hidden="true"></i>
+								</a>
+							</li>
+						<?php endif; ?>
+						<?php if (get_sub_field('twitter')) : ?>
+							<li class="footer__rs__item">
+								<a href="<?php the_sub_field('twitter'); ?>" target="_blank" aria-label="Twitter">
+									<i class="fa-brands fa-x-twitter" aria-hidden="true"></i>
+								</a>
+							</li>
+						<?php endif; ?>
+						<?php if (get_sub_field('instagram')) : ?>
+							<li class="footer__rs__item">
+								<a href="<?php the_sub_field('instagram'); ?>" target="_blank" aria-label="Instagram">
+									<i class="fa-brands fa-instagram" aria-hidden="true"></i>
+								</a>
+							</li>
+						<?php endif; ?>
+						<?php if (get_sub_field('google')) : ?>
+							<li class="footer__rs__item">
+								<a href="<?php the_sub_field('google'); ?>" target="_blank" aria-label="Google">
+									<i class="fa-brands fa-google" aria-hidden="true"></i>
+								</a>
+							</li>
+						<?php endif; ?>
+						<?php if (get_sub_field('linkedin')) : ?>
+							<li class="footer__rs__item">
+								<a href="<?php the_sub_field('linkedin'); ?>" target="_blank" aria-label="Linkedin">
+									<i class="fa-brands fa-linkedin-in" aria-hidden="true"></i>
+								</a>
+							</li>
+						<?php endif; ?>
+						<?php if (get_sub_field('youtube')) : ?>
+							<li class="footer__rs__item">
+								<a href="<?php the_sub_field('youtube'); ?>" target="_blank" aria-label="Youtube">
+									<i class="fa-brands fa-youtube" aria-hidden="true"></i>
+								</a>
+							</li>
+						<?php endif; ?>
+					<?php endwhile; ?>
+				</ul>
+			<?php endif; ?>
+		</div>
 	</div>
 	<div class="footer__area__bottom d-md-flex justify-content-between">
 		<div></div>
@@ -92,7 +91,7 @@ $template = str_replace(array('page-', '.php'), '', $template);
 			<p class="text-center"> © <?php echo $year ?> Heptalytics tout droits réservés</p>
 		</div>
 		<a class="footer__area__credits" href="https://thatmuch.fr" target="_blank" rel="noopener noreferrer">
-			<img data-src="<?php echo get_template_directory_uri() ?>/assets/images/THATMUCH_Logo_White.png" alt="logo that much">
+			<img src="<?php echo get_template_directory_uri() ?>/assets/images/THATMUCH_Logo_White.png" alt="logo that much">
 		</a>
 	</div>
 </div>

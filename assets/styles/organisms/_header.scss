@@ -9,7 +9,39 @@
 .menu-item {
     cursor: pointer;
 }
-
+li.menu-item-gtranslate {
+    img {
+        margin: 0 0.5rem 0 !important;
+    }
+    .gt_switcher {
+        width: inherit;
+        font-family: $text-ff;
+        .gt_option {
+            border: 0;
+            background: transparent;
+            width: inherit;
+            color: $color-light;
+            a {
+                border: 0;
+                color: $color-light;
+                &:hover {
+                    background: transparent;
+                }
+            }
+        }
+        .gt_selected {
+            background: transparent;
+            a {
+                border: 0;
+                width: 130px;
+                color: $color-light;
+                &:hover {
+                    background: transparent;
+                }
+            }
+        }
+    }
+}
 .header--frontpage {
     display: grid;
     position: relative;
@@ -17,6 +49,7 @@
     background: var(--Dark-20_131327, #131327);
     padding: 3.5rem 2.5rem 6rem;
     height: 45rem;
+    overflow: hidden;
     color: $color-light;
     text-align: center;
     .header__container {
@@ -30,7 +63,7 @@
     }
     svg {
         position: absolute;
-        bottom: 0;
+        bottom: -50px;
         z-index: 0;
     }
 }

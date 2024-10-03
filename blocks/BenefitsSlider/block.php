@@ -3,6 +3,7 @@ $data = array(
 	'feature' => get_field('feature'),
 	'title' => get_field('title'),
 	'text' => get_field('text'),
+	'image' => get_field('image'),
 	'sliders' => get_field('sliders'),
 );
 // Dynamic block ID
@@ -14,7 +15,7 @@ if (!empty($block['anchor'])) {
 }
 
 get_template_part(
-	'blocks/SliderServices/template',
+	'blocks/BenefitsSlider/template',
 	null,
 	array(
 		'block' => $block,

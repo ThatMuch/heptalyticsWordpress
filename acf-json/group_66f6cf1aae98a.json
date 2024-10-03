@@ -1,6 +1,6 @@
 {
     "key": "group_66f6cf1aae98a",
-    "title": "Layer Pinned",
+    "title": "Block - Layered sections",
     "fields": [
         {
             "key": "field_66f6cf8a4b14f",
@@ -138,5 +138,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1727451520
+    "modified": 1727875942
 }

@@ -1,6 +1,6 @@
 {
 	"name": "sliderServices",
-	"title": "Slider services",
+	"title": "Services Slider",
 	"description": "Une section pour afficher des services dans un slider",
 	"style": [
 		"file:./style.css"

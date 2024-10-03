@@ -47,24 +47,50 @@
 		});
 	}
 
-	// function initializeOwlCarousel() {
-	// 	$('.blog__list').owlCarousel({
-	// 		margin: 15,
-	// 		loop: true,
-	// 		dots: false,
-	// 		autoplay: true,
-	// 		autoplayHoverPause: true,
-	// 		stagePadding: 100,
-	// 		responsive: {
-	// 			0: {
-	// 				items: 1,
-	// 			},
-	// 			768: {
-	// 				items: 2,
-	// 			},
-	// 		},
-	// 	});
-	// }
+	function initializeOwlCarousel() {
+			$(".sliderServices__list").owlCarousel({
+                margin: 15,
+                loop: true,
+                dots: false,
+                autoplay: true,
+                autoplayHoverPause: true,
+                autoplayTimeout: 3000,
+                items: 1,
+                responsive: {
+                    0: {
+                        items: 1,
+                    },
+                    768: {
+                        items: 2,
+                    },
+                    992: {
+                        items: 1,
+                    },
+                },
+            });
+
+	$(".sliderBenefits__list").owlCarousel({
+        margin: 15,
+        loop: true,
+        dots: false,
+        autoplay: false,
+        autoplayHoverPause: true,
+        autoplayTimeout: 3000,
+        items: 1,
+        nav: true,
+        responsive: {
+            0: {
+                items: 1,
+            },
+            768: {
+                items: 2,
+            },
+            992: {
+                items: 1,
+            },
+        },
+    });
+	}
 
 	function updateArticleListItems() {
 		$('.article__list li').each(function () {

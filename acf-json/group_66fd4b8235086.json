@@ -4,10 +4,10 @@
     "fields": [
         {
             "key": "field_66fd4b8237314",
-            "label": "Content",
+            "label": "Benefits - Content",
             "name": "",
             "aria-label": "",
-            "type": "accordion",
+            "type": "tab",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -16,9 +16,9 @@
                 "class": "",
                 "id": ""
             },
-            "open": 0,
-            "multi_expand": 0,
-            "endpoint": 0
+            "placement": "top",
+            "endpoint": 0,
+            "selected": 0
         },
         {
             "key": "field_66fd4b8237319",
@@ -90,10 +90,10 @@
         },
         {
             "key": "field_66fd4b8237322",
-            "label": "Slider",
+            "label": "Benefits - Items",
             "name": "",
             "aria-label": "",
-            "type": "accordion",
+            "type": "tab",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -102,9 +102,9 @@
                 "class": "",
                 "id": ""
             },
-            "open": 0,
-            "multi_expand": 0,
-            "endpoint": 0
+            "placement": "top",
+            "endpoint": 0,
+            "selected": 0
         },
         {
             "key": "field_66fd4b8237326",
@@ -193,5 +193,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1727876292
+    "modified": 1728322023
 }

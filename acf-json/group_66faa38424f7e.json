@@ -3,11 +3,11 @@
     "title": "Block - Services slider",
     "fields": [
         {
-            "key": "field_66faa38493158",
+            "key": "field_6704189140e04",
             "label": "Content",
             "name": "",
             "aria-label": "",
-            "type": "accordion",
+            "type": "tab",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -16,9 +16,9 @@
                 "class": "",
                 "id": ""
             },
-            "open": 0,
-            "multi_expand": 0,
-            "endpoint": 0
+            "placement": "top",
+            "endpoint": 0,
+            "selected": 0
         },
         {
             "key": "field_66faa3da9315b",
@@ -84,11 +84,11 @@
             "delay": 0
         },
         {
-            "key": "field_66faa4c320721",
-            "label": "Slider",
+            "key": "field_670418bf3847e",
+            "label": "Services",
             "name": "",
             "aria-label": "",
-            "type": "accordion",
+            "type": "tab",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -97,9 +97,9 @@
                 "class": "",
                 "id": ""
             },
-            "open": 0,
-            "multi_expand": 0,
-            "endpoint": 0
+            "placement": "top",
+            "endpoint": 0,
+            "selected": 0
         },
         {
             "key": "field_66faa4dd20722",
@@ -219,5 +219,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1727875962
+    "modified": 1728321756
 }

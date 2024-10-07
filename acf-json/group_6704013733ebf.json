@@ -3,6 +3,24 @@
     "title": "Block - Stats",
     "fields": [
         {
+            "key": "field_6704191721b7b",
+            "label": "Stats - Content",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0,
+            "selected": 0
+        },
+        {
             "key": "field_67040137bfa02",
             "label": "Feature",
             "name": "feature",
@@ -45,6 +63,24 @@
             "append": ""
         },
         {
+            "key": "field_6704196921b7c",
+            "label": "Stats - Items",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0,
+            "selected": 0
+        },
+        {
             "key": "field_67040164bfa04",
             "label": "Cards",
             "name": "cards",
@@ -58,7 +94,7 @@
                 "class": "",
                 "id": ""
             },
-            "layout": "table",
+            "layout": "block",
             "pagination": 0,
             "min": 0,
             "max": 0,
@@ -158,5 +194,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1728315914
+    "modified": 1728321945
 }

@@ -57,6 +57,7 @@
 	height: 45px;
 	object-fit: contain;
 	    mix-blend-mode: multiply;
+		margin: 0 auto;
 }
 
 @media only screen and (max-width: 767px) {
@@ -135,9 +136,10 @@
 .slide-track {
 	animation: scroll 40s linear infinite;
 	display: flex;
-	width: calc(250px * 14);
+	width: calc(250px * 10);
 }
 
 .slide {
 	width: 250px;
+
 }

@@ -109,8 +109,20 @@ add_filter('wp_get_attachment_image_attributes', 'my_lazyload_attachments', 10, 
 // Replace the image attributes in Post/Page Content
 function my_lazyload_content_images($content)
 {
-  $content = preg_replace('/(<img[^>]*?)(?<!data-)src=/Ui', '$1data-src=', $content);
-  $content = preg_replace('/(<img[^>]*?)(?<!data-)srcset=/Ui', '$1data-srcset=', $content);
+  // Ensure the content is a string
+  if (!is_string($content)) {
+    return $content;
+  }
+
+  // Regular expression to match images without the "skip-lazy" class
+  $pattern = '/(<img[^>]*?)(?<!skip-lazy)(?<!data-)src=/Ui';
+
+  // Replace "src" with "data-src" for images without the "skip-lazy" class
+  $content = preg_replace($pattern, '$1data-src=', $content);
+
+  // Replace "srcset" with "data-srcset" for images without the "skip-lazy" class
+  $pattern = '/(<img[^>]*?)(?<!skip-lazy)(?<!data-)srcset=/Ui';
+  $content = preg_replace($pattern, '$1data-srcset=', $content);
 
   return $content;
 }

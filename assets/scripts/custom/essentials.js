@@ -90,6 +90,25 @@
             },
         },
     });
+	$(".statsSlider__list").owlCarousel({
+        margin: 15,
+        loop: true,
+        dots: false,
+        autoplay: false,
+        autoplayHoverPause: true,
+        autoplayTimeout: 3000,
+        items: 4,
+        nav: true,
+        autoWidth: true,
+        responsive: {
+            0: {
+                items: 1,
+            },
+            768: {
+                items: 2,
+            },
+        },
+    });
 	}
 
 	function updateArticleListItems() {
@@ -133,6 +152,11 @@
 	$('.wp-block-file__button').each(function () {
 		$(this).removeClass('wp-block-file__button wp-element-button').addClass('btn btn__orange blue');
 		console.log("first")
+	});
+
+	$(".trp-language-switcher-container a").each(function () {
+		//move the language switcher to id right-menu
+		$(this).appendTo("#right-menu");
 	});
 
 	//==================================================================================

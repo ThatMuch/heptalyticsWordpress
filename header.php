@@ -64,7 +64,7 @@ $template = str_replace(array('page-', '.php'), '', $template);
 					));
 					?>
 				</div>
-				<div>
+				<div id="right-menu" class="right-menu">
 					<a href="<?php echo get_theme_mod('header_button_link', '#') ?>" class="btn btn__primary">
 						<?php echo get_theme_mod('header_button_text', 'Demander une démo') ?>
 					</a>

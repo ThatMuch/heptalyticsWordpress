@@ -5,7 +5,12 @@
  * @since       heptalytics_1.0.0.0
  *
  */
-
+.right-menu {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    gap: 1rem;
+}
 .menu-item {
     cursor: pointer;
 }

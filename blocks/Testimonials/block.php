@@ -7,6 +7,9 @@
 // $data is what we're going to expose to our render template
 $data = array(
 	'title' => get_field('title'),
+	'title_metrics' => get_field('title_metrics'),
+	'text_metrics' => get_field('text_metrics'),
+	'metrics' => get_field('metrics'),
 );
 
 // Dynamic block ID
@@ -27,7 +30,7 @@ if (!empty($block['class_name'])) {
  * Pass the block data into the template part
  */
 get_template_part(
-	'blocks/temoignage/template',
+	'blocks/Testimonials/template',
 	null,
 	array(
 		'block'      => $block,

@@ -28,7 +28,7 @@ register_block_type(
 	),
 );
 register_block_type(
-	get_template_directory() . '/blocks/temoignage/block.json',
+	get_template_directory() . '/blocks/Testimonials/block.json',
 	array(
 		'icon'  => $icon,
 	),

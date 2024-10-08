@@ -109,6 +109,27 @@
             },
         },
     });
+	$(".testimonial__list").owlCarousel({
+        margin: 15,
+        loop: true,
+        dots: false,
+        autoplay: false,
+        autoplayHoverPause: true,
+        autoplayTimeout: 3000,
+        items: 1,
+        nav: true,
+        responsive: {
+            0: {
+                items: 1,
+            },
+            768: {
+                items: 1,
+            },
+            992: {
+                items: 1,
+            },
+        },
+    });
 	}
 
 	function updateArticleListItems() {
@@ -157,6 +178,8 @@
 	$(".trp-language-switcher-container a").each(function () {
 		//move the language switcher to id right-menu
 		$(this).appendTo("#right-menu");
+		// add class to the language switcher
+		$(this).addClass("lang__switcher");
 	});
 
 	//==================================================================================

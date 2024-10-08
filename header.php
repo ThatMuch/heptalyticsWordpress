@@ -40,14 +40,20 @@ $template = str_replace(array('page-', '.php'), '', $template);
 	<?php heptalytics_gtm('body') ?>
 
 	<?php
+	// check if is mobile device
+	$mobile = wp_is_mobile();
 	$custom_logo_id = get_theme_mod('custom_logo');
-	$image = wp_get_attachment_image_src($custom_logo_id, 'full');
+	$image = wp_get_attachment_image_src($custom_logo_id, 'full')[0];
+	$icon = get_theme_mod('favicon');
+
+	$logo = $mobile ? get_site_icon_url() : wp_get_attachment_image_src($custom_logo_id, 'full')[0];
 	?>
 
 	<nav class="header__area navbar sticky-top navbar-expand-lg">
 		<div class="container align-items-center <?= $template === "landing" ? "justify-content-center" : "" ?>">
 			<a class="navbar-brand" href="<?php echo site_url(); ?>">
-				<img data-src="<?php if ($image[0]) : echo $image[0];
+
+				<img data-src="<?php if ($logo) : echo $logo;
 								else : echo get_template_directory_uri() ?>/assets/images/stanlee_logo_texte.png<? endif; ?>" alt="Heptalytics">
 			</a>
 			<?php if ($template !== "landing") : ?>
@@ -69,7 +75,7 @@ $template = str_replace(array('page-', '.php'), '', $template);
 						<?php echo get_theme_mod('header_button_text', 'Demander une démo') ?>
 					</a>
 					<input type="checkbox">
-					<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+					<button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
 						<div class="bar"></div>
 						<div class="bar"></div>
 						<div class="bar"></div>

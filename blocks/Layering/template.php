@@ -4,7 +4,7 @@ $data = $args['data'];
 // The block ID
 $block_id = $args['block_id'];
 ?>
-
+<div id="features"></div>
 <div id="<?php echo $block_id; ?>">
 	<div class="container">
 		<div class="pinnedSections__wrapper">

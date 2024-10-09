@@ -71,8 +71,11 @@ li.menu-item-gtranslate {
     }
     svg {
         position: absolute;
-        bottom: -50px;
+        bottom: 0;
         z-index: 0;
+        @include breakpoint(laptop) {
+            bottom: -50px;
+        }
     }
 }
 .header__area {

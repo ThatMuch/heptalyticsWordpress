@@ -3,7 +3,11 @@
     border-radius: var(--32, 2rem);
     background: var(--Gradient-1, linear-gradient(180deg, #2d2d50 -12.32%, #131327 110.05%));
     padding: 3rem 6rem;
-    transform: translateY(-100px);
+    transform: translateY(-27px);
+    @media screen and (min-width: 768px) {
+        transform: translateY(-100px);
+
+    }
 
     .panel-faq {
         display: none; /* Initially hide the panel */

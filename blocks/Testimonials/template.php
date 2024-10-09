@@ -47,12 +47,12 @@ $post_id = get_the_ID();
 			<?php if ($the_query->have_posts()) : ?>
 				<?php while ($the_query->have_posts()) : $the_query->the_post(); ?>
 					<div class="testimonial__item row">
-						<div class="col-3">
+						<div class="col-sm-3">
 							<div class="testimonial__img">
 								<?php the_post_thumbnail('large', array('class' => 'testimonial__image')); ?>
 							</div>
 						</div>
-						<div class="col-9">
+						<div class="col-sm-9">
 							<div class="content">
 								<h2 class="testimonial__title"><?= $data['title'] ?></h2>
 								<h4 class="content__title mb-0 text-white"><?php the_title() ?></h4>

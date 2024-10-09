@@ -27,15 +27,14 @@ $post_id = get_the_ID();
 	<section id="<?php echo $block_id; ?>" class="<?php echo $class_name; ?>">
 		<?php if ($data["metrics"]): ?>
 			<div class="row mb-50">
-				<div class="col-sm-6">
-					<h2 class="text-white"><?php echo $data['title_metrics'] ?></h2>
-					<div><?php echo $data['text_metrics'] ?></div>
+				<div class="col-sm-3">
+					<?php if ($data['title_metrics']) : ?> <h2 class="text-white metric__title"><?php echo $data['title_metrics'] ?></h2><?php endif; ?>
 				</div>
-				<div class="col-sm-6">
+				<div class="col-sm-9">
 					<div class="d-flex gap-4">
 						<?php foreach ($data["metrics"] as $metric): ?>
 							<div class="metric__card">
-								<h3 class="metric__title"><?php echo $metric['metric'] ?></h3>
+								<h3 class="metric__card__title"><?php echo $metric['metric'] ?></h3>
 								<div><?php echo $metric["text"] ?></div>
 							</div>
 						<?php endforeach; ?>

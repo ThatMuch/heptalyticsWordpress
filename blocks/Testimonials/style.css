@@ -23,10 +23,11 @@
         margin: 0 auto;
 
         img {
-border-width: 8px;
-        border-color: rgba(255, 255, 255, 0.2);
-        border-radius: 6rem;
-        width: 96px;
+            border-width: 8px;
+            border-color: rgba(255, 255, 255, 0.2);
+            border-radius: 6rem;
+            width: 96px !important;
+            margin: 0 auto;
         }
     }
     .metric__title {

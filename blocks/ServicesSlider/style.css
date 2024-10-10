@@ -1,28 +1,46 @@
 .sliderServices {
-.sliderServices__item, .sliderServices__content {
+    .sliderServices__item,
+    .sliderServices__content {
         display: flex;
-    flex-direction: column;
-    gap: 1rem;
-}
+        flex-direction: column;
+        gap: 1rem;
+    }
 
-.sliderServices__item {
-    padding: 1.5rem;
-    color: #fff;
-    border-radius: var(--16, 1rem);
-background: var(--Gradient-1, linear-gradient(180deg, #2D2D50 -12.32%, #131327 110.05%));
-}
+    .sliderServices__item {
+        border-radius: var(--16, 1rem);
+        background: var(--Gradient-1, linear-gradient(180deg, #2d2d50 -12.32%, #131327 110.05%));
+        padding: 1.5rem;
+        color: #fff;
+
+            li {
+            position: relative;
+            margin-bottom: 1rem;
+            list-style: none;
+            &:before {
+                display: block;
+                position: absolute;
+                top: 6px;
+                left: -1.5rem;
+                background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQiIGhlaWdodD0iMTMiIHZpZXdCb3g9IjAgMCAxNCAxMyIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggaWQ9IlZlY3RvciIgZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0xLjc4OTk1IDEyLjk2NDVMMC41IDExLjY3NDNMMTAuMjM0OSAxLjkzOTM5TDEuNjY4OTUgMS44MjQxOUwxLjY5MjYxIDBMMTMuMzIwMiAwLjE1NjA1M0wxMy4zMiAxMS42NTA4SDExLjQ5NTZWMy4yNTg4MUwxLjc4OTk1IDEyLjk2NDVaIiBmaWxsPSJ3aGl0ZSIvPgo8L3N2Zz4K");
+                background-repeat: no-repeat;
+                width: 1rem;
+                height: 1rem;
+                content: "";
+            }
+        }
+    }
     .sliderServices__feature {
+        margin-bottom: 0;
         color: var(--Primary, #3c98ed);
         font-weight: 700;
         line-height: var(--Line-Height-Headline-H4, 1.6875rem);
         letter-spacing: var(--4, 0.25rem);
         text-transform: uppercase;
-        margin-bottom: 0;
     }
     .sliderServices__item__title {
         color: #fff;
     }
-    .sliderServices__desc {
+    .sliderServices__item__desc {
         font-style: normal;
         font-weight: 400;
         font-size: var(--Scale-M, 1.125rem);

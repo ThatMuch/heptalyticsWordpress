@@ -31,7 +31,7 @@ $post_id = get_the_ID();
 					<?php if ($data['title_metrics']) : ?> <h2 class="text-white metric__title"><?php echo $data['title_metrics'] ?></h2><?php endif; ?>
 				</div>
 				<div class="col-sm-9">
-					<div class="d-flex gap-4">
+					<div class="metrics__list">
 						<?php foreach ($data["metrics"] as $metric): ?>
 							<div class="metric__card">
 								<h3 class="metric__card__title"><?php echo $metric['metric'] ?></h3>

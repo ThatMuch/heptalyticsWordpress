@@ -45,14 +45,12 @@ $template = str_replace(array('page-', '.php'), '', $template);
 	$custom_logo_id = get_theme_mod('custom_logo');
 	$image = wp_get_attachment_image_src($custom_logo_id, 'full')[0];
 	$icon = get_theme_mod('favicon');
-
 	$logo = $mobile ? get_site_icon_url() : wp_get_attachment_image_src($custom_logo_id, 'full')[0];
 	?>
 
 	<nav class="header__area navbar sticky-top navbar-expand-lg">
 		<div class="container align-items-center <?= $template === "landing" ? "justify-content-center" : "" ?>">
 			<a class="navbar-brand" href="<?php echo site_url(); ?>">
-
 				<img data-src="<?php if ($logo) : echo $logo;
 								else : echo get_template_directory_uri() ?>/assets/images/stanlee_logo_texte.png<? endif; ?>" alt="Heptalytics">
 			</a>

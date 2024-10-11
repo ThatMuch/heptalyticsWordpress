@@ -14,7 +14,6 @@
         font-weight: 700;
         font-size: var(--Scale-XS, 0.875rem);
         line-height: var(--Line-Height-Headline-H4, 1.6875rem);
-        font-family: var(--Font-Family-Headline, "Plus Jakarta Sans");
         letter-spacing: var(--4, 0.25rem);
         text-transform: uppercase;
     }

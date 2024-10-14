@@ -1,29 +1,31 @@
 <?php
-$args = array(
-	'post_type' => 'post',
-	'posts_per_page' => 4,
+$argsQuery = array(
+	'posts_per_page' => 3,
+	'order' => 'DESC',
 
 );
 
-$the_query = new WP_Query($args);
+$the_query = new WP_Query($argsQuery);
+
+$data = $args['data'];
 ?>
 <section class="block__blog">
 	<div class="container">
-		<div class="row g-3">
-			<div class="col-lg-4">
-				<h1 class="section__title"><span class="text__orange title">Suivez</span> nos dernières actualités</h1>
-				<a href="<?php echo site_url();  ?>/community-blog" class="btn btn__primary">Voir tous les articles</a>
+		<?php if ($the_query->have_posts()) : ?>
+			<div class="d-inline-flex gap-2 align-items-center mb-4">
+				<h2 class="mb-0"><?php echo $data['title']
+									?></h2>
+				<a href="<?php
+
+							echo get_permalink(get_option('page_for_posts'));
+							?>" class="btn btn__light d-block">See all the news</a>
 			</div>
-			<div class="col-lg-8">
-				<div class="blog__list owl-carousel">
-					<?php if ($the_query->have_posts()) : ?>
-						<?php while ($the_query->have_posts()) : $the_query->the_post(); ?>
-							<?php get_template_part('templates/wp', 'post'); ?>
-						<?php endwhile; ?>
-						<?php wp_reset_postdata(); ?>
-					<?php endif; ?>
-				</div> <!-- end blog list -->
-			</div> <!-- end col -->
-		</div>
+			<div class="blog__list">
+				<?php while ($the_query->have_posts()) : $the_query->the_post(); ?>
+					<?php get_template_part('templates/wp', 'post'); ?>
+				<?php endwhile; ?>
+			</div>
+			<?php wp_reset_postdata(); ?>
+		<?php endif; ?>
 	</div>
 </section>

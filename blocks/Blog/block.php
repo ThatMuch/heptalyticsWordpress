@@ -1,4 +1,8 @@
 <?php
+$data = array(
+	'title' => get_field('title'),
+);
+
 
 // Dynamic block ID
 $block_id = 'blog' . $block['id'];
@@ -21,8 +25,7 @@ get_template_part(
 		'block' => $block,
 		'is_preview' => $is_preview,
 		'post_id' => $post_id,
-
-		//'data' => $data,
+		'data' => $data,
 		'class_name' => $class_name,
 		'block_id' => $block_id,
 	)

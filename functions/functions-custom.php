@@ -48,3 +48,48 @@ function find_block_by_name($block_name, $post_id)
 
 	return null;
 }
+
+function my_theme_customize_register($wp_customize)
+{
+	$wp_customize->add_setting('header_title', array(
+		'default' => 'My Theme',
+		'transport' => 'refresh',
+	));
+	$wp_customize->add_control('header_title', array(
+		'label' => __('Header Title', 'my_theme'),
+		'section' => 'title_tagline',
+		'settings' => 'header_title',
+		'type' => 'text',
+	));
+	$wp_customize->add_setting('header_description', array(
+		'default' => 'My Theme Description',
+		'transport' => 'refresh',
+	));
+	$wp_customize->add_control('header_description', array(
+		'label' => __('Header Description', 'my_theme'),
+		'section' => 'title_tagline',
+		'settings' => 'header_description',
+		'type' => 'textarea',
+	));
+	$wp_customize->add_setting('header_button_text', array(
+		'default' => 'My Theme Button Text',
+		'transport' => 'refresh',
+	));
+	$wp_customize->add_control('header_button_text', array(
+		'label' => __('Header Button Text', 'my_theme'),
+		'section' => 'title_tagline',
+		'settings' => 'header_button_text',
+		'type' => 'text',
+	));
+	$wp_customize->add_setting('header_button_link', array(
+		'default' => '#',
+		'transport' => 'refresh',
+	));
+	$wp_customize->add_control('header_button_link', array(
+		'label' => __('Header Button Link', 'my_theme'),
+		'section' => 'title_tagline',
+		'settings' => 'header_button_link',
+		'type' => 'text',
+	));
+}
+add_action('customize_register', 'my_theme_customize_register');

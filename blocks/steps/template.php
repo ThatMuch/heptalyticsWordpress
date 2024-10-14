@@ -17,7 +17,7 @@ $class_name = $args['class_name'];
 			<div class="col-lg-5">
 				<?php $image = $data['image'];  ?>
 				<?php if (!empty($image)) : ?>
-					<img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
+					<img data-src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
 				<?php endif; ?>
 			</div>
 			<div class="col-lg-7">

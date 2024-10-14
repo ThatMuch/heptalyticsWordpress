@@ -45,7 +45,7 @@
 function heptalytics_enqueue()
 {
   // fontawesome cdn
-  wp_enqueue_style('fontawesome', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css');
+  wp_enqueue_style('fontawesome', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css');
 
   // jQuery (from wp core)
   wp_deregister_script('jquery');
@@ -73,6 +73,17 @@ function heptalytics_enqueue()
   wp_enqueue_script('wp-bootstrap-starter-skip-link-focus-fix', get_template_directory_uri() . '/inc/assets/js/skip-link-focus-fix.min.js', array(), '20151215', true);
   wp_enqueue_script('owl-carousel', get_template_directory_uri() . '/inc/assets/js/owl.carousel.min.js', array(), '', true);
 }
+function theme_gsap_script()
+{
+  // The core GSAP library
+  wp_enqueue_script('gsap-js', 'https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js', array(), false, true);
+  // ScrollTrigger - with gsap.js passed as a dependency
+  wp_enqueue_script('gsap-st', 'https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js', array('gsap-js'), false, true);
+  // ScrollToPlugin - with gsap.js passed as a dependency
+  wp_enqueue_script('gsap-stp', 'https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollToPlugin.min.js', array('gsap-js'), false, true);
+}
+
+add_action('wp_enqueue_scripts', 'theme_gsap_script');
 
 add_action('wp_enqueue_scripts', 'heptalytics_enqueue');
 
@@ -89,6 +100,45 @@ add_action('admin_enqueue_scripts', 'my_custom_admin_stylesheet');
 function my_custom_login_stylesheet()
 {
   wp_enqueue_style('custom-login', get_stylesheet_directory_uri() . '/assets/styles/admin/login.min.css');
+}
+
+add_filter('the_content', 'my_lazyload_content_images');
+add_filter('widget_text', 'my_lazyload_content_images');
+add_filter('wp_get_attachment_image_attributes', 'my_lazyload_attachments', 10, 2);
+
+// Replace the image attributes in Post/Page Content
+function my_lazyload_content_images($content)
+{
+  // Ensure the content is a string
+  if (!is_string($content)) {
+    return $content;
+  }
+
+  // Regular expression to match images without the "skip-lazy" class
+  $pattern = '/(<img[^>]*?)(?<!skip-lazy)(?<!data-)src=/Ui';
+
+  // Replace "src" with "data-src" for images without the "skip-lazy" class
+  $content = preg_replace($pattern, '$1data-src=', $content);
+
+  // Replace "srcset" with "data-srcset" for images without the "skip-lazy" class
+  $pattern = '/(<img[^>]*?)(?<!skip-lazy)(?<!data-)srcset=/Ui';
+  $content = preg_replace($pattern, '$1data-srcset=', $content);
+
+  return $content;
+}
+
+// Replace the image attributes in Post Listing, Related Posts, etc.
+function my_lazyload_attachments($atts, $attachment)
+{
+  $atts['data-src'] = $atts['src'];
+  unset($atts['src']);
+
+  if (isset($atts['srcset'])) {
+    $atts['data-srcset'] = $atts['srcset'];
+    unset($atts['srcset']);
+  }
+
+  return $atts;
 }
 
 //This loads the function above on the login page
@@ -281,6 +331,8 @@ function wp_trim_all_excerpt($text)
     $text = get_the_content('');
     $text = apply_filters('the_content', $text);
     $text = str_replace(']]>', ']]>', $text);
+    // remove br tags
+    $text = str_replace('/<br/>', '', $text);
   }
   $text = strip_shortcodes($text);
   $text = strip_tags($text);

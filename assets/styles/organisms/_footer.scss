@@ -22,6 +22,7 @@
 
             a {
                 color: $color-primary;
+                font-size: 1.5rem !important;
 
                 &:hover {
                     color: $color-primary-darker;
@@ -35,21 +36,27 @@
     -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 16px 16px 0px 0px;
-    background: linear-gradient(278.49deg, #1956a8 0%, #171c60 88.22%);
-    padding: 0.625rem 1.875rem var(--Spacing-0, 0rem) 1.875rem;
-    color: #a3bbdc;
+    background-color: $color-black;
+    padding: 3rem 4rem 0;
+    color: $color-light;
     text-align: center;
     @include breakpoint(laptop) {
         text-align: inherit;
     }
-    ul {
-        display: flex;
-        gap: 0.625rem;
-        @include breakpoint(mobile) {
-            flex-direction: column;
+    .menu-footer-container .menu {
+        &-item {
+            @include breakpoint(phablet) {
+                text-align: left;
+            }
+        }
+        @include breakpoint(laptop) {
+            display: grid;
+            grid-template-rows: repeat(3, 1fr);
+            grid-template-columns: repeat(2, 1fr);
+            grid-column-gap: 24px;
+            grid-row-gap: 0px;
         }
     }
-
     ul,
     li {
         margin-bottom: 0;
@@ -59,23 +66,22 @@
         a {
             color: #fff;
             font-style: normal;
-            font-weight: 700;
             font-size: 0.875rem;
             line-height: 1.625rem;
             text-decoration: none;
-            text-transform: uppercase;
         }
     }
 
     &__logo {
-        width: 3rem;
+        margin-bottom: 1rem;
+        width: 11rem;
     }
 
     &__bottom {
         margin-top: 15px;
-        border-top: 1px solid #5e89c2;
+        border-top: 1px solid rgba($color: $color-light, $alpha: 0.25);
         padding: 15px 0;
-        color: #5e89c2;
+        color: rgba($color: $color-light, $alpha: 0.25);
 
         p {
             margin-bottom: 0;

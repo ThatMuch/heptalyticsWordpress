@@ -36,7 +36,7 @@ $isReverse = get_field('reverse');
 			<div class="col-lg-5 d-flex h-100">
 				<?php if ($image) : ?>
 					<div class="hero__image mt-auto mb-auto">
-						<img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>">
+						<img data-src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>">
 					</div>
 				<?php endif; ?>
 			</div>

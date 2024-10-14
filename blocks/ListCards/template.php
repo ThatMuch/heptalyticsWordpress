@@ -23,9 +23,9 @@ $class_name = $args['class_name'];
 					<div class="card__item">
 						<?php foreach ($card['items'] as $item) :  ?>
 							<div class="card__content">
-								<img src="<?php echo $item['icon']['url']; ?>" class="card__content__icon" alt="<?php echo $item['icon']['alt']; ?>">
+								<img data-src="<?php echo $item['icon']['url']; ?>" class="card__content__icon" alt="<?php echo $item['icon']['alt']; ?>">
 								<h3 class="card__content__title h5"><?php echo $item['title']; ?></h3>
-								<p class="card__content__text"><?php echo $item['text']; ?></p>
+								<div class="card__content__text"><?php echo esc_html($item['text']); ?></div>
 							</div>
 						<?php endforeach; ?>
 					</div>

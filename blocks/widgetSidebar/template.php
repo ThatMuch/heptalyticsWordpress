@@ -14,7 +14,7 @@ $class_name = $args['class_name'];
 ?>
 <div id="<?php echo $block_id; ?>" class="<?php echo $class_name; ?>">
 	<?php if ($data['icon']) : ?>
-		<img src="<?php echo esc_url($data['icon']['url']); ?>" alt="<?php echo esc_attr($data['icon']['alt']); ?>" />
+		<img data-src="<?php echo esc_url($data['icon']['url']); ?>" alt="<?php echo esc_attr($data['icon']['alt']); ?>" />
 	<?php endif; ?>
 
 	<h2><?php echo $data['title']; ?></h2>

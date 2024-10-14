@@ -1,0 +1,29 @@
+{
+	"name": "statsSlider",
+	"title": "Stats Slider",
+	"description": "Une section pour afficher des statistiques dans un slider",
+	"style": [
+		"file:./style.css"
+	],
+	"category": "theme",
+	"keywords": [
+		"Heptalytics",
+		"Slider",
+		"Carrousel"
+	],
+	"acf": {
+		"mode": "preview",
+		"renderTemplate": "./block.php"
+	},
+	"align": "full",
+	"supports": {
+		"align": false,
+		"anchor": false,
+		"alignContent": false,
+		"color": {
+			"text": false,
+			"background": true,
+			"link": false
+		}
+	}
+}

@@ -47,24 +47,90 @@
 		});
 	}
 
-	// function initializeOwlCarousel() {
-	// 	$('.blog__list').owlCarousel({
-	// 		margin: 15,
-	// 		loop: true,
-	// 		dots: false,
-	// 		autoplay: true,
-	// 		autoplayHoverPause: true,
-	// 		stagePadding: 100,
-	// 		responsive: {
-	// 			0: {
-	// 				items: 1,
-	// 			},
-	// 			768: {
-	// 				items: 2,
-	// 			},
-	// 		},
-	// 	});
-	// }
+	function initializeOwlCarousel() {
+			$(".sliderServices__list").owlCarousel({
+                margin: 15,
+                loop: true,
+                dots: false,
+                autoplay: true,
+                autoplayHoverPause: true,
+                autoplayTimeout: 3000,
+                items: 1,
+                responsive: {
+                    0: {
+                        items: 1,
+                    },
+                    768: {
+                        items: 2,
+                    },
+                    992: {
+                        items: 1,
+                    },
+                },
+            });
+
+	$(".sliderBenefits__list").owlCarousel({
+        margin: 15,
+        loop: true,
+        dots: false,
+        autoplay: false,
+        autoplayHoverPause: true,
+        autoplayTimeout: 3000,
+        items: 1,
+        nav: true,
+        responsive: {
+            0: {
+                items: 1,
+            },
+            768: {
+                items: 2,
+            },
+            992: {
+                items: 1,
+            },
+        },
+    });
+	$(".statsSlider__list").owlCarousel({
+        margin: 15,
+        loop: true,
+        dots: false,
+        autoplay: false,
+        autoplayHoverPause: true,
+        autoplayTimeout: 3000,
+        items: 4,
+        nav: true,
+        autoWidth: true,
+        responsive: {
+            0: {
+                items: 1,
+            },
+            768: {
+                items: 2,
+            },
+        },
+    });
+	$(".testimonial__list").owlCarousel({
+        margin: 15,
+        loop: true,
+        dots: false,
+        autoplay: false,
+        autoplayHoverPause: true,
+        autoplayTimeout: 3000,
+        items: 1,
+        nav: true,
+        responsive: {
+            0: {
+                items: 1,
+            },
+            768: {
+                items: 1,
+            },
+            992: {
+                items: 1,
+            },
+        },
+    });
+	}
 
 	function updateArticleListItems() {
 		$('.article__list li').each(function () {
@@ -107,6 +173,13 @@
 	$('.wp-block-file__button').each(function () {
 		$(this).removeClass('wp-block-file__button wp-element-button').addClass('btn btn__orange blue');
 		console.log("first")
+	});
+
+	$(".trp-language-switcher-container a").each(function () {
+		//move the language switcher to id right-menu
+		$(this).appendTo("#right-menu");
+		// add class to the language switcher
+		$(this).addClass("lang__switcher");
 	});
 
 	//==================================================================================

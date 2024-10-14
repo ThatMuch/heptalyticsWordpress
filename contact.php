@@ -31,13 +31,13 @@ get_header(); ?>
 						<div class="col-lg-4 order-lg-1">
 							<div class="community">
 								<div class="community__head mb-20">
-									<img src="<?php echo get_template_directory_uri() ?>/assets/images/blasons.svg" alt="">
+									<img data-src="<?php echo get_template_directory_uri() ?>/assets/images/blasons.svg" alt="">
 									<h3><?php the_sub_field('title'); ?></h3>
 									<h6 class="my-4"><?php the_sub_field('text'); ?></h6>
-									<a href="tel:<?php the_sub_field('phone'); ?>"><img src="<?php echo get_template_directory_uri() ?>/assets/images/phone.svg" alt="Téléphone"></a>
+									<a href="tel:<?php the_sub_field('phone'); ?>"><img data-src="<?php echo get_template_directory_uri() ?>/assets/images/phone.svg" alt="Téléphone"></a>
 								</div>
 								<div class="community__image mt-1">
-									<img src="<?php echo get_template_directory_uri() ?>/assets/images/contact-image.jpg" alt="Contact">
+									<img data-src="<?php echo get_template_directory_uri() ?>/assets/images/contact-image.jpg" alt="Contact">
 								</div>
 							</div>
 						</div>

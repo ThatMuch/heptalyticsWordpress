@@ -10,6 +10,12 @@
 
 // Get the post's categories
 $categories = get_the_category();
+$wp_queryRelated = new WP_Query(array(
+	'posts_per_page' => 3,
+	'order' => 'DESC',
+	'paged' => $paged,
+	'post__not_in' => array(get_the_ID()),
+));
 ?>
 
 <?php get_header(); ?>
@@ -39,7 +45,17 @@ $categories = get_the_category();
 					<?php the_content(); ?>
 				</div>
 		<?php endwhile;
+			wp_reset_postdata();
 		endif; ?>
+
+		<?php if ($wp_queryRelated->have_posts()) : ?>
+			<h2>Related Posts</h2>
+			<div class="blog__list">
+				<?php while ($wp_queryRelated->have_posts()) : $wp_queryRelated->the_post(); ?>
+					<?php get_template_part('templates/wp', 'post'); ?>
+				<?php endwhile; ?>
+				<?php wp_reset_postdata(); ?>
+			</div>
+		<?php endif; ?>
 	</div>
-</div>
-<?php get_footer(); ?>
+	<?php get_footer(); ?>

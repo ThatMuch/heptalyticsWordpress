@@ -60,7 +60,7 @@
         },
         {
             "key": "field_63f62b43b61dd",
-            "label": "Background",
+            "label": "Image",
             "name": "background",
             "aria-label": "",
             "type": "image",
@@ -81,27 +81,8 @@
             "max_height": "",
             "max_size": "",
             "mime_types": "",
+            "allow_in_bindings": 1,
             "preview_size": "medium"
-        },
-        {
-            "key": "field_6420880c29513",
-            "label": "Pro",
-            "name": "pro",
-            "aria-label": "",
-            "type": "true_false",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "message": "",
-            "default_value": 0,
-            "ui": 0,
-            "ui_on_text": "",
-            "ui_off_text": ""
         }
     ],
     "location": [
@@ -122,5 +103,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1679853770
+    "modified": 1727958327
 }

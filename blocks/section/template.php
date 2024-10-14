@@ -33,7 +33,7 @@ $class_name = $args['class_name'];
 								<?php if ($link) : ?>
 									<a href="<?php echo esc_url($link['url']); ?>" target="<?php echo esc_attr($link['target']); ?>" class="btn btn__white">
 										<?php echo esc_html($link['title']); ?>
-										<img src="<?php echo get_template_directory_uri() ?>/assets/images/arrow-right.svg" alt="Flèche vers la droite">
+										<img data-src="<?php echo get_template_directory_uri() ?>/assets/images/arrow-right.svg" alt="Flèche vers la droite">
 									</a>
 								<?php endif; ?>
 							<?php endwhile; ?>

@@ -11,7 +11,16 @@
 
     img {
         display: block;
-        margin: 0 auto;
-        max-width: 80%;
-    }
+        margin: 0 auto 2rem;
+        max-width: 40%;
+		@media screen and (min-width: 992px) {
+			max-width: 80%;
+		}
+	}
+	.content {
+		padding: 0 6rem;
+		@media screen and (min-width: 992px) {
+			padding: 0;
+		}
+	}
 }

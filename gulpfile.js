@@ -6,6 +6,8 @@ var concat = require("gulp-concat");
 var uglify = require("gulp-uglify");
 var rename = require("gulp-rename");
 var browserSync = require("browser-sync").create();
+var zip = require("gulp-zip");
+
 
 gulp.task("styles", function () {
 	return (
@@ -63,4 +65,22 @@ gulp.task("watch", function () {
 	gulp.watch("**/*.php").on("change",browserSync.reload);
 	gulp.watch("**/*.js").on("change",browserSync.reload);
 });
+
+// New task to create a production-ready zip
+gulp.task("zip", function () {
+    return gulp
+        .src([
+            "./**/*",
+            "!./{node_modules,node_modules/**/*}",
+            "!./assets/{sass,sass/*}",
+            "!./gulpfile.js",
+            "!./package.json",
+            "!./package-lock.json",
+        ])
+        .pipe(zip("heptalytics.zip"))
+        .pipe(gulp.dest("./../"));
+});
+
+// Add the zip task to a build command (optional)
+gulp.task("build", gulp.series("styles", "scripts", "zip"));
 gulp.task("default", gulp.parallel("styles", "scripts", "watch"));

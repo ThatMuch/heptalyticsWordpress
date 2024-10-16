@@ -67,21 +67,6 @@
 	}
 }
 
-.carousel-logo {
-	position: relative;
-}
-
-.carousel-wrapper-logo {
-	position: absolute;
-	left: 0;
-	width: 600%;
-	animation: carousel-animation 6s linear infinite;
-}
-
-.carousel-item-logo {
-	float: left;
-	width: 16.666%;
-}
 
 @keyframes carousel-animation {
 	0% {
@@ -130,13 +115,13 @@
 	overflow: hidden;
 	position: relative;
 	width: 100%;
-
 }
 
 .slide-track {
 	animation: scroll 40s linear infinite;
 	display: flex;
 	width: calc(250px * 9);
+	gap : 2rem;
 }
 
 .slide {

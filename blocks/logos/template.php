@@ -23,10 +23,10 @@ $size = 'medium'; // (thumbnail, medium, large, full or custom size)
 						<li class="slide">
 							<?php if ($image['description']) : ?>
 								<a href="<?php echo esc_url($image['description']); ?>" target="_blank">
-									<img class="skip-lazy" src="<?php echo esc_url($image['sizes']['medium']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
+									<img class="skip-lazy" src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
 								</a>
 							<?php else : ?>
-								<img class="skip-lazy" src="<?php echo esc_url($image['sizes']['medium']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
+								<img class="skip-lazy" src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
 							<?php endif; ?>
 						</li>
 					<?php endforeach; ?>
@@ -34,13 +34,14 @@ $size = 'medium'; // (thumbnail, medium, large, full or custom size)
 						<li class="slide">
 							<?php if ($image['description']) : ?>
 								<a href="<?php echo esc_url($image['description']); ?>" target="_blank">
-									<img class="skip-lazy" src="<?php echo esc_url($image['sizes']['medium']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
+									<img class="skip-lazy" src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
 								</a>
 							<?php else : ?>
-								<img class="skip-lazy" src="<?php echo esc_url($image['sizes']['medium']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
+								<img class="skip-lazy" src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
 							<?php endif; ?>
 						</li>
 					<?php endforeach; ?>
+
 				</ul>
 			<?php endif; ?>
 		</div>

@@ -54,7 +54,7 @@
         border-radius: var(--16, 1rem);
         background: rgba(19, 19, 39, 0.28);
         padding: var(--32, 2rem);
-        width: 243px;
+            flex: 1;
         .metric__card__title {
             color: var(--Neutral-100_FFFFFF, #fff);
             font-style: normal;

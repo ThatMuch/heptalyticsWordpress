@@ -10,8 +10,10 @@ $block_id = $args['block_id'];
 		<div class="row">
 			<div class="col-lg-7">
 				<div class="sliderServices__content">
-					<h4 class="sliderServices__feature"><?php echo $data['feature'] ?></h4>
-					<h2 class="sliderServices__title"><?php echo $data['title'] ?></h2>
+					<div>
+						<h4 class="sliderServices__feature mb-0"><?php echo $data['feature'] ?></h4>
+						<h2 class="sliderServices__title"><?php echo $data['title'] ?></h2>
+					</div>
 					<div class="sliderServices__desc"><?php echo $data['text'] ?></div>
 				</div>
 			</div>

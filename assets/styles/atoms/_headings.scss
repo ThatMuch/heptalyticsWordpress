@@ -19,22 +19,22 @@ h6 {
 
 h1,
 .h1 {
-    @include responsive-font-size(48, 60, bold);
+    @include responsive-font-size(44, 52, bold);
 }
 
 h2,
 .h2 {
-    @include responsive-font-size(30, 48, 500);
+    @include responsive-font-size(32, 40, 500);
 }
 
 h3,
 .h3 {
-    @include responsive-font-size(24, 36, 500);
+    @include responsive-font-size(20, 30, 500);
 }
 
 h4,
 .h4 {
-    @include responsive-font-size(20, 30, 500);
+    @include responsive-font-size(14, 27, 500);
 }
 
 h5,

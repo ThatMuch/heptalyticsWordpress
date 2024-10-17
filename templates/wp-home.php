@@ -67,7 +67,7 @@ $wp_queryPosts = new WP_Query(array(
 		<?php endwhile; ?>
 		<?php wp_reset_postdata(); ?>
 	<?php endif; ?>
-	<h3 class="blog__title mb-3">Tous les articles</h3>
+	<h3 class="blog__title mb-3">All news</h3>
 	<div class="blog__list">
 		<?php if ($wp_queryPosts->have_posts()) : ?>
 			<?php while ($wp_queryPosts->have_posts()) : $wp_queryPosts->the_post(); ?>

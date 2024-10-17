@@ -172,12 +172,12 @@
 	});
 	$('.wp-block-file__button').each(function () {
 		$(this).removeClass('wp-block-file__button wp-element-button').addClass('btn btn__orange blue');
-		console.log("first")
 	});
 
 	$(".trp-language-switcher-container a").each(function () {
-		//move the language switcher to id right-menu
-		$(this).appendTo("#right-menu");
+		// move it right after the button btn__primary on mobile
+		$(this).insertAfter("#headerCta");
+
 		// add class to the language switcher
 		$(this).addClass("lang__switcher");
 	});

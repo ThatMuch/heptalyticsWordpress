@@ -9,10 +9,9 @@
     display: flex;
 
     align-items: center;
-    gap: 0.5rem;
+    gap: 1rem;
     @include breakpoint(laptop) {
         flex-direction: row-reverse;
-        gap: 1rem;
     }
 }
 .menu-item {
@@ -92,8 +91,10 @@ li.menu-item-gtranslate {
     }
     .navbar-brand {
         margin-right: 0.5rem;
-        width: 8.25rem;
-        @include breakpoint(desktop) {
+        &.mobile {
+            height: 42px;
+        }
+        &.desktop {
             width: 11.25rem;
         }
 
@@ -101,9 +102,6 @@ li.menu-item-gtranslate {
             width: 100%;
             height: 100%;
             object-fit: contain;
-            // @include breakpoint(mobile) {
-            //     width: 121px;
-            // }
         }
     }
     .nav-link {

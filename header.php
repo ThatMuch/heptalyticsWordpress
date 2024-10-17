@@ -50,36 +50,39 @@ $template = str_replace(array('page-', '.php'), '', $template);
 
 	<nav class="header__area navbar sticky-top navbar-expand-lg">
 		<div class="container align-items-center <?= $template === "landing" ? "justify-content-center" : "" ?>">
-			<a class="navbar-brand" href="<?php echo site_url(); ?>">
-				<img data-src="<?php if ($logo) : echo $logo;
-								else : echo get_template_directory_uri() ?>/assets/images/stanlee_logo_texte.png<? endif; ?>" alt="Heptalytics">
+			<a class="navbar-brand <?php echo $mobile ? "mobile" : "desktop" ?>" href="<?php echo site_url(); ?>">
+				<?php if ($logo) : ?>
+					<img
+						class="skip-lazy"
+						data-src="<?php echo $logo; ?>"
+						alt="Heptalytics">
+				<?php endif; ?>
 			</a>
-			<?php if ($template !== "landing") : ?>
-				<div class="collapse navbar-collapse" id="navbar">
-					<?php
-					wp_nav_menu(array(
-						'theme_location' => 'mainmenu', // Defined when registering the menu
-						'menu_id'        => 'menu-main',
-						'container'      => false,
-						'depth'          => 3,
-						'menu_class'     => 'nav navbar-nav mx-auto',
-						'walker'         => new Bootstrap_NavWalker(), // This controls the display of the Bootstrap Navbar
-						'fallback_cb'    => 'Bootstrap_NavWalker::fallback', // For menu fallback
-					));
-					?>
-				</div>
-				<div id="right-menu" class="right-menu">
-					<a href="<?php echo get_theme_mod('header_button_link', '#') ?>" class="btn btn__primary">
-						<?php echo get_theme_mod('header_button_text', 'Demander une démo') ?>
-					</a>
-					<input type="checkbox">
-					<button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
-						<div class="bar"></div>
-						<div class="bar"></div>
-						<div class="bar"></div>
-					</button>
-				</div>
-			<?php endif; ?>
+			<div class="collapse navbar-collapse" id="navbar">
+				<?php
+				wp_nav_menu(array(
+					'theme_location' => 'mainmenu', // Defined when registering the menu
+					'menu_id'        => 'menu-main',
+					'container'      => false,
+					'depth'          => 3,
+					'menu_class'     => 'nav navbar-nav mx-auto',
+					'walker'         => new Bootstrap_NavWalker(), // This controls the display of the Bootstrap Navbar
+					'fallback_cb'    => 'Bootstrap_NavWalker::fallback', // For menu fallback
+				));
+				?>
+			</div>
+			<div id="right-menu" class="right-menu">
+				<a id="headerCta" href="<?php echo get_theme_mod('header_button_link', '#') ?>" class="btn btn__primary">
+					<?php echo get_theme_mod('header_button_text', 'Demander une démo') ?>
+				</a>
+				<input type="checkbox">
+				<button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+					<div class="bar"></div>
+					<div class="bar"></div>
+					<div class="bar"></div>
+				</button>
+			</div>
+
 		</div>
 	</nav>
 

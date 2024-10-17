@@ -92,6 +92,10 @@ li.menu-item-gtranslate {
     }
     .navbar-brand {
         margin-right: 0.5rem;
+        width: 8.25rem;
+        @include breakpoint(desktop) {
+            width: 121px;
+        }
         width: 11.25rem;
         img {
             width: 100%;

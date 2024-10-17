@@ -75,11 +75,11 @@
                 }
             }
             img {
-                display: block;
-                margin: 0 auto;
-                width: 80%;
-                @media (min-width: 451px) {
+                display: none;
+                @media (min-width: 768px) {
+                    display: block;
                     width: 55%;
+                    margin: 0 auto;
                 }
                 @media screen and (min-width: 992px) {
                     width: 100%;

@@ -89,9 +89,9 @@ $template = str_replace(array('page-', '.php'), '', $template);
 				<h1 class="header__title">
 					<?php echo get_theme_mod('header_title', 'Le meilleur outil pour analyser vos données') ?>
 				</h1>
-				<p class="header__description">
+				<div class="header__description">
 					<?php echo get_theme_mod('header_description', 'Heptalytics est un outil d\'analyse de données qui vous permet de suivre et d\'analyser vos données en temps réel.') ?>
-				</p>
+				</div>
 				<a href="<?php echo get_theme_mod('header_button_link', '#') ?>" class="btn btn__white">
 					<?php echo get_theme_mod('header_button_text', 'Demander une démo') ?>
 				</a>

@@ -70,6 +70,9 @@ li.menu-item-gtranslate {
         margin-bottom: 1.5rem;
         color: $color-light;
     }
+    .header__description {
+        white-space: pre-wrap;
+    }
     svg {
         position: absolute;
         bottom: 0;

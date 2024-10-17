@@ -506,7 +506,6 @@ hr.custom {
 .section__title {
     margin-bottom: 30px;
     font-weight: 700;
-    font-family: "Rubik", sans-serif;
     text-transform: uppercase;
 
     @include responsive-font-size(40, 48, 800);
@@ -678,8 +677,6 @@ hr.custom {
 .article__text {
     color: #152235;
     font-family: $text-ff;
-
-    @include responsive-font-size(16, 26, 500);
 }
 
 .article__text iframe {
@@ -689,14 +686,13 @@ hr.custom {
 
 .article__text h3 {
     margin: 0 0 20px;
-    font-family: "Rubik";
+
     text-transform: uppercase;
 
     @include responsive-font-size(24, 30, 700);
 }
 
 .article__text h4 {
-    font-family: "Rubik";
     text-transform: uppercase;
 
     @include responsive-font-size(16, 24, 700);
@@ -921,7 +917,6 @@ hr.custom {
 .step__list ul.nav-tabs li a .text__body .head {
     display: block;
     font-weight: 700;
-    font-family: "Rubik";
     text-transform: uppercase;
 }
 

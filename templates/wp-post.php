@@ -17,7 +17,7 @@
 				</div>
 			<?php endif; ?>
 			<a href="<?php the_permalink() ?>">
-				<h4><?php the_title(); ?></h4>
+				<h3><?php the_title(); ?></h3>
 			</a>
 
 		</div>

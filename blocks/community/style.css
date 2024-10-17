@@ -20,7 +20,6 @@
 	font-size: 2.5rem;
 	color: #fff;
 	margin: 10px 0 0;
-	font-family: "Rubik", sans-serif;
 }
 
 @media only screen and (max-width: 1200px) {
@@ -42,7 +41,7 @@
 	font-weight: 700;
 	font-size: 1.125;
 
-	font-family: "Rubik", sans-serif;
+
 }
 
 .community__head a {
@@ -84,7 +83,7 @@
 	font-weight: 700;
 	font-size: 1.5;
 
-	font-family: "Rubik", sans-serif;
+
 }
 
 .community__body p {
@@ -102,7 +101,7 @@
 
 .community__title {
 	color: #FF8833;
-	font-family: "Rubik", sans-serif;
+
 	font-weight: 800;
 	font-size: 3.75;
 

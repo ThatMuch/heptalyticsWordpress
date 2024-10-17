@@ -40,9 +40,12 @@
     outline: none;
     border: none;
     background-color: transparent;
-    padding-right: 100px;
+    padding-right: 48px;
     width: 100%; /* Make the accordion buttons take up the full width */
     text-align: left;
+    @media screen and (min-width: 768px) {
+        padding-right: 100px;
+    }
 
     &::after {
         position: absolute;

@@ -3,7 +3,7 @@
         content: '';
         display: block;
         width: 50%;
-height: 50%;
+        height: 50%;
         position: absolute;
         top: -100px;
         right: -22%;
@@ -32,9 +32,9 @@ height: 50%;
         border: 1px solid var(--Primary, #3c98ed);
         border-radius: var(--16, 1rem);
         background: linear-gradient(180deg, rgba(242, 247, 255, 0.9) 0%, rgba(255, 255, 255, 0.9) 100%);
-        padding: var(--32, 2rem);
+        padding: 1.5rem;
         width: 14.625rem;
-        height: 294px;
+        height: 300px;
         color: var(--Primary, #3c98ed);
         &.featured {
             border: 0;
@@ -47,6 +47,9 @@ height: 50%;
         .statsSlider__item__title {
             color: var(--Primary, #3c98ed);
             font-size: 2.8rem;
+        }
+        .statsSlider__item__desc {
+            font-size: .9rem;
         }
         .statsSlider__item__icon {
             height: 20px;

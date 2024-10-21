@@ -1,11 +1,9 @@
 .testimonial {
-    margin-top: -50px;
-    border-radius: var(--32, 2rem);
+    border-radius: 1rem;
     background: var(--Gradient-1, linear-gradient(180deg, #2d2d50 -12.32%, #131327 110.05%));
     padding: 2rem;
     color: #fff;
     @media screen and (min-width: 768px) {
-        margin-top: -100px;
         padding: 4.75rem;
     }
     .testimonial__title {

@@ -1,11 +1,13 @@
 .block__link {
     position: relative;
     z-index: 0;
-    border-radius: var(--32, 2rem) var(--32, 2rem) var(--0, 0rem) var(--0, 0rem);
+    border-radius: 1rem;
     background: var(--Gradient-1, linear-gradient(180deg, #2d2d50 -12.32%, #131327 110.05%));
-    padding: 1rem 0 9rem;
+    padding: 2rem;
     color: #f2f7ff;
+	margin-bottom: 50px;
     .block__link__title {
+		font-size: 1.25rem;
         color: #f2f7ff;
     }
 
@@ -18,9 +20,6 @@
 		}
 	}
 	.content {
-		padding: 0 1.5rem;
-		@media screen and (min-width: 992px) {
 			padding: 0;
-		}
 	}
 }

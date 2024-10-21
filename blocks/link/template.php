@@ -9,7 +9,7 @@ $image = get_field('background');
 		<div class="container">
 			<div class="row align-items-center">
 				<div class="col-lg-6">
-					<img src="<?php echo $image["url"] ?>" alt="<?php echo get_the_title(); ?>">
+					<img src="<?php echo $image["url"] ?>" alt="Heptalytics logo">
 				</div>
 				<div class="col-lg-6 p-0">
 					<h3 class="block__link__title"><?php echo $title; ?></h3>

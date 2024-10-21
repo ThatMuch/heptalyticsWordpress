@@ -46,7 +46,6 @@ $template = str_replace(array('page-', '.php'), '', $template);
 	$image = wp_get_attachment_image_src($custom_logo_id, 'full')[0];
 	$icon = get_theme_mod('favicon');
 	$logo = $mobile ? get_site_icon_url() : wp_get_attachment_image_src($custom_logo_id, 'full')[0];
-	var_dump($mobile);
 	?>
 
 	<nav class="header__area navbar navbar-expand-lg">

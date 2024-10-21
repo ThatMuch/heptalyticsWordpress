@@ -48,7 +48,7 @@ $template = str_replace(array('page-', '.php'), '', $template);
 	$logo = $mobile ? get_site_icon_url() : wp_get_attachment_image_src($custom_logo_id, 'full')[0];
 	?>
 
-	<nav class="header__area navbar sticky-top navbar-expand-lg">
+	<nav class="header__area navbar navbar-expand-lg">
 		<div class="container align-items-center <?= $template === "landing" ? "justify-content-center" : "" ?>">
 			<a class="navbar-brand <?php echo $mobile ? "mobile" : "desktop" ?>" href="<?php echo site_url(); ?>">
 				<?php if ($logo) : ?>

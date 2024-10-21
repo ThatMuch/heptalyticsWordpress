@@ -11,7 +11,7 @@ $image = get_field('background');
 				<div class="col-lg-6">
 					<img src="<?php echo $image["url"] ?>" alt="<?php echo get_the_title(); ?>">
 				</div>
-				<div class="col-lg-6 content">
+				<div class="col-lg-6 p-0">
 					<h3 class="block__link__title"><?php echo $title; ?></h3>
 					<p><?php echo $text; ?></p>
 					<?php if ($link) : ?>

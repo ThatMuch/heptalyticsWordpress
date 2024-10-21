@@ -38,6 +38,7 @@
         text-transform: uppercase;
     }
     .sliderServices__item__title {
+        	font-size: 1.25rem;
         color: #fff;
     }
     .sliderServices__item__desc {

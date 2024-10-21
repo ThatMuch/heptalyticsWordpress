@@ -84,16 +84,18 @@ $template = str_replace(array('page-', '.php'), '', $template);
 			<?php endif; ?>
 		</div>
 	</div>
-	<div class="footer__area__bottom d-md-flex justify-content-between">
+	<!-- <div class="footer__area__bottom d-md-flex justify-content-between">
 		<div></div>
 		<div>
-			<?php $year = date('Y'); ?>
-			<p class="text-center"> © <?php echo $year ?> Heptalytics tout droits réservés</p>
+			<?php // $year = date('Y'); 
+			?>
+			<p class="text-center"> © <?php echo $year ?> Heptalytics tous droits réservés</p>
 		</div>
 		<a class="footer__area__credits" href="https://thatmuch.fr" target="_blank" rel="noopener noreferrer">
-			<img src="<?php echo get_template_directory_uri() ?>/assets/images/THATMUCH_Logo_White.png" alt="logo that much">
+			<img src="<?php // echo get_template_directory_uri() 
+						?>/assets/images/THATMUCH_Logo_White.png" alt="logo that much">
 		</a>
-	</div>
+	</div> -->
 </div>
 
 <?php wp_footer() ?>

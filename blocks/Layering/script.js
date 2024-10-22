@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", () => {
         end: () => `+=${cards.length * cardHeight}`,
         scrub: true,
         animation: animation,
-        markers: true,
+        // markers: true,
         ease: "none",
         invalidateOnRefresh: true,
     });

@@ -20,13 +20,12 @@ document.addEventListener("DOMContentLoaded", () => {
     ScrollTrigger.create({
         trigger: ".pinnedSections__wrapper",
 		start: "top+=70px top",
-		//start: "top top",
         pin: true,
         pinSpacing: true,
         end: () => `+=${cards.length * cardHeight}`,
         scrub: true,
         animation: animation,
-        markers: true,
+        //markers: true,
         ease: "none",
         invalidateOnRefresh: true,
     });

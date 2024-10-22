@@ -54,11 +54,14 @@ li.menu-item-gtranslate {
     position: relative;
     place-items: center;
     background: var(--Dark-20_131327, #131327);
-    padding: 3.5rem 2.5rem 6rem;
+    padding: 1.5rem;
     min-height: 45rem;
     overflow: hidden;
     color: $color-light;
     text-align: center;
+    @include breakpoint(laptop) {
+        padding: 3.5rem 2.5rem 6rem;
+    }
     .header__container {
         z-index: 1;
         max-width: 900px;

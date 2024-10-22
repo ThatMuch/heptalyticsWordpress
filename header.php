@@ -49,7 +49,7 @@ $template = str_replace(array('page-', '.php'), '', $template);
 	?>
 
 	<nav class="header__area navbar navbar-expand-lg">
-		<div class="container align-items-center <?= $template === "landing" ? "justify-content-center" : "" ?>">
+		<div class="container align-items-center">
 			<a class="navbar-brand <?php echo $mobile ? "mobile" : "desktop" ?>" href="<?php echo site_url(); ?>">
 				<?php if ($logo) : ?>
 					<img

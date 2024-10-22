@@ -55,7 +55,7 @@ li.menu-item-gtranslate {
     place-items: center;
     background: var(--Dark-20_131327, #131327);
     padding: 3.5rem 2.5rem 6rem;
-    height: 45rem;
+    min-height: 45rem;
     overflow: hidden;
     color: $color-light;
     text-align: center;

@@ -1,6 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
     gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
-
     const cards = document.querySelectorAll(".pinnedSections__item");
 
     const animation = gsap.timeline();

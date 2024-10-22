@@ -87,17 +87,19 @@ $template = str_replace(array('page-', '.php'), '', $template);
 	<!-- <div class="footer__area__bottom d-md-flex justify-content-between">
 		<div></div>
 		<div>
-			<?php // $year = date('Y'); 
+			<?php // $year = date('Y');
 			?>
 			<p class="text-center"> © <?php echo $year ?> Heptalytics tous droits réservés</p>
 		</div>
 		<a class="footer__area__credits" href="https://thatmuch.fr" target="_blank" rel="noopener noreferrer">
-			<img src="<?php // echo get_template_directory_uri() 
+			<img src="<?php // echo get_template_directory_uri()
 						?>/assets/images/THATMUCH_Logo_White.png" alt="logo that much">
 		</a>
 	</div> -->
 </div>
-
+<script>
+	ScrollTrigger.refresh();
+</script>
 <?php wp_footer() ?>
 </body>
 

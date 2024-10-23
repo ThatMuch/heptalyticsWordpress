@@ -34,7 +34,7 @@
                 color: var(--Primary, #3c98ed);
                 font-weight: 700;
                 line-height: var(--Line-Height-Headline-H4, 1.6875rem);
-                /* 192.857% */
+                        font-size: .8rem;
                 letter-spacing: var(--4, 0.25rem);
                 text-transform: uppercase;
             }

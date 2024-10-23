@@ -61,7 +61,6 @@
 }
 
 @media only screen and (max-width: 767px) {
-
 	.sponsor ul li img {
 		max-width: 120px;
 	}
@@ -106,7 +105,7 @@
 	}
 
 	100% {
-		transform: translateX(calc(-250px * 9))
+		transform: translateX(calc(-250px * 8))
 	}
 }
 
@@ -120,11 +119,10 @@
 .slide-track {
 	animation: scroll 40s linear infinite;
 	display: flex;
-	width: calc(250px * 9);
+	width: calc(250px * 8);
 	gap : 2rem;
 }
 
 .slide {
 	width: 250px;
-
 }

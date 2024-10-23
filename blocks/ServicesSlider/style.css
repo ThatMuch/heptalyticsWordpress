@@ -36,6 +36,7 @@
         line-height: var(--Line-Height-Headline-H4, 1.6875rem);
         letter-spacing: var(--4, 0.25rem);
         text-transform: uppercase;
+                font-size: .8rem;
     }
     .sliderServices__item__title {
         	font-size: 1.25rem;

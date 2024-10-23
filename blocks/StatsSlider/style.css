@@ -1,28 +1,29 @@
 .statsSlider {
+    margin-bottom: 2rem;
+    overflow: visible;
     &:before {
-        content: '';
         display: block;
-        width: 50%;
-        height: 50%;
         position: absolute;
         top: -100px;
         right: -22%;
         z-index: -1;
         background-image: url(./img/heptagone.svg);
-        background-repeat: no-repeat;
         background-position: 100% 0;
         background-size: contain;
+        background-repeat: no-repeat;
+        width: 50%;
+        height: 50%;
+        content: "";
     }
-    margin-bottom: 2rem;
-    overflow: visible;
     @media screen and (min-width: 768px) {
-            margin-bottom: 5rem;
+        margin-bottom: 5rem;
     }
 
     .statsSlider__feature {
         margin-bottom: 0;
         color: var(--Primary, #3c98ed);
         font-weight: 700;
+        font-size: 0.8rem;
         line-height: var(--Line-Height-Headline-H4, 1.6875rem);
         letter-spacing: var(--4, 0.25rem);
         text-transform: uppercase;
@@ -49,13 +50,13 @@
             font-size: 2.8rem;
         }
         .statsSlider__item__desc {
-            font-size: .9rem;
+            font-size: 0.9rem;
         }
         .statsSlider__item__icon {
+            margin-bottom: var(--16, 1rem);
+            width: auto;
             height: 20px;
             object-fit: contain;
-                width: auto;
-                margin-bottom: var(--16, 1rem);
         }
     }
 }

@@ -98,7 +98,15 @@ $template = str_replace(array('page-', '.php'), '', $template);
 	</div> -->
 </div>
 <script>
-	ScrollTrigger.refresh();
+	// if browser is Safari
+	if (navigator.userAgent.indexOf('Safari') != -1 && navigator.userAgent.indexOf('Chrome') == -1) {
+		document.addEventListener("DOMContentLoaded", function() {
+			gsap.delayedCall(5, () => ScrollTrigger.refresh());
+			console.log("test");
+		});
+	} else {
+		ScrollTrigger.refresh();
+	}
 </script>
 <?php wp_footer() ?>
 </body>

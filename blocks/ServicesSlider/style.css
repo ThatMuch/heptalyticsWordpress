@@ -11,6 +11,7 @@
         background: var(--Gradient-1, linear-gradient(180deg, #2d2d50 -12.32%, #131327 110.05%));
         padding: 1.5rem;
         color: #fff;
+        height: 410px;
 
             li {
             position: relative;

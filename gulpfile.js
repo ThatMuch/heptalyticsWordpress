@@ -7,7 +7,14 @@ var uglify = require("gulp-uglify");
 var rename = require("gulp-rename");
 var browserSync = require("browser-sync").create();
 var zip = require("gulp-zip");
+  var imagemin = require("gulp-imagemin");
 
+ gulp.task("optiimage", function () {
+     return gulp
+         .src("assets/images/")
+         .pipe(imagemin({ progressive: true }))
+         .pipe(gulp.dest("assets/optiimage/"));
+ });
 
 gulp.task("styles", function () {
 	return (

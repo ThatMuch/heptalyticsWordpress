@@ -52,6 +52,8 @@ function heptalytics_enqueue()
   wp_register_script('jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js', false, '3.6.0');
   wp_enqueue_script('jquery');
   // styles
+  wp_enqueue_style('normalize', get_template_directory_uri() . '/inc/assets/css/normalize.css', false, null);
+  wp_enqueue_style('animate', "https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css", false, null);
   wp_enqueue_style('owl-carousel', get_template_directory_uri() . '/inc/assets/css/owl.carousel.min.css', false, null);
   wp_enqueue_style('owl-carousel', get_template_directory_uri() . '/inc/assets/css/owl.theme.default.min.css', false, null);
   wp_enqueue_style('heptalytics_/styles', get_template_directory_uri() . '/assets/styles/style.min.css', false, null);
@@ -77,6 +79,8 @@ function theme_gsap_script()
 {
   // The core GSAP library
   wp_enqueue_script('gsap-js', 'https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js', array(), false, true);
+  // Observer - with gsap.js passed as a dependency
+  wp_enqueue_script('gsap-obs', 'https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/Observer.min.js', array('gsap-js'), false, true);
   // ScrollTrigger - with gsap.js passed as a dependency
   wp_enqueue_script('gsap-st', 'https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js', array('gsap-js'), false, true);
   // ScrollToPlugin - with gsap.js passed as a dependency

@@ -8,7 +8,7 @@ $block_id = $args['block_id'];
 <div id="<?php echo $block_id; ?>" class="sliderServices">
 	<div class="container">
 		<div class="row">
-			<div class="col-lg-7">
+			<div class="col-lg-6">
 				<div class="sliderServices__content">
 					<div>
 						<h4 class="sliderServices__feature mb-0"><?php echo $data['feature'] ?></h4>
@@ -17,7 +17,7 @@ $block_id = $args['block_id'];
 					<div class="sliderServices__desc"><?php echo $data['text'] ?></div>
 				</div>
 			</div>
-			<div class="col-lg-5">
+			<div class="col-lg-6">
 				<div class="sliderServices__list owl-carousel">
 					<?php foreach ($data['sliders'] as $slider) : ?>
 						<div class="sliderServices__item">

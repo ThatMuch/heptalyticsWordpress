@@ -20,16 +20,6 @@ $template = str_replace(array('page-', '.php'), '', $template);
 	<?php heptalytics_gtm('head') ?>
 	<!--=== OPEN-GRAPH TAGS ===-->
 	<?php heptalytics_ogtags() ?>
-	<!--=== PRELOAD FONTS ===-->
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link rel="stylesheet" href="<?php echo get_template_directory_uri() ?>/inc/assets/css/owl.carousel.min.css">
-	<link rel="stylesheet" href="<?php echo get_template_directory_uri() ?>/inc/assets/css/owl.theme.default.min.css">
-	<link rel="stylesheet" href="<?php echo get_template_directory_uri() ?>/inc/assets/css/bootstrap.min.css">
-	<link rel="stylesheet" href="<?php echo get_template_directory_uri() ?>/inc/assets/css/normalize.css">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-	<!-- Google Tag Manager -->
-	<!-- End Google Tag Manager -->
 	<!--=== WP HEAD ===-->
 	<?php wp_head(); ?>
 </head>

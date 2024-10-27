@@ -28,7 +28,7 @@ $post_id = get_the_ID();
 		<?php if ($data["metrics"]): ?>
 			<div class="row mb-50">
 				<div class="col-sm-3">
-					<?php if ($data['title_metrics']) : ?> <h2 class="text-white metric__title"><?php echo $data['title_metrics'] ?></h2><?php endif; ?>
+					<?php if ($data['title_metrics']) : ?> <h2 class="metric__title"><?php echo $data['title_metrics'] ?></h2><?php endif; ?>
 				</div>
 				<div class="col-sm-9">
 					<div class="metrics__list">
@@ -54,7 +54,7 @@ $post_id = get_the_ID();
 						<div class="col-sm-9">
 							<div class="content">
 								<h2 class="testimonial__title"><?= $data['title'] ?></h2>
-								<h4 class="content__title mb-0 text-white"><?php the_title() ?></h4>
+								<h4 class="content__title mb-0"><?php the_title() ?></h4>
 								<div class="content__desc"><?php the_content() ?></div>
 							</div>
 						</div>

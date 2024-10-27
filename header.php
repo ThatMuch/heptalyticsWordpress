@@ -99,7 +99,6 @@ $template = str_replace(array('page-', '.php'), '', $template);
 					<?php echo get_theme_mod('header_button_text', 'Demander une démo') ?>
 				</a>
 			</div>
-			<img class="header__image" data-src="<?php echo get_template_directory_uri() ?>/assets/images/header-image.png" alt="Heptalytics">
 			<?php if (!$mobile) : ?>
 				<svg clip-rule="evenodd" fill-rule="evenodd" stroke-miterlimit="10" viewBox="0 0 1687.82 334.83" width="100%"
 					xmlns="http://www.w3.org/2000/svg">

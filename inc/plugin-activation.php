@@ -1,4 +1,5 @@
 <?php
+
 /**
  * This file represents an example of the code that themes would use to register
  * the required plugins.
@@ -33,7 +34,7 @@
  */
 require_once get_template_directory() . '/inc/class-tgm-plugin-activation.php';
 
-add_action( 'tgmpa_register', 'stanlee_register_required_plugins' );
+add_action('tgmpa_register', 'stanlee_register_required_plugins');
 
 /**
  * Register the required plugins for this theme.
@@ -52,7 +53,8 @@ add_action( 'tgmpa_register', 'stanlee_register_required_plugins' );
  *
  * This function is hooked into `tgmpa_register`, which is fired on the WP `init` action on priority 10.
  */
-function stanlee_register_required_plugins() {
+function stanlee_register_required_plugins()
+{
 	/*
 	 * Array of plugin arrays. Required keys are name and slug.
 	 * If the source is NOT from the .org repo, then source is also required.
@@ -60,7 +62,7 @@ function stanlee_register_required_plugins() {
 	$plugins = array(
 
 		// This is an example of how to include a plugin bundled with a theme.
- 		array(
+		array(
 			'name'               => 'Advanced Custom Fields PRO',                                               // The plugin name.
 			'slug'               => 'advanced-custom-fields-pro',                                               // The plugin slug (typically the folder name).
 			'source'             => get_template_directory() . '/inc/plugins/advanced-custom-fields-pro.zip',   // The plugin source.
@@ -72,8 +74,8 @@ function stanlee_register_required_plugins() {
 			'name'     => 'Advanced Custom Fields: Contact Form 7',
 			'slug'     => 'advanced-custom-fields-contact-form-7',
 			'source'   => 'https://github.com/taylormsj/acf-cf7/archive/master.zip',
-			'required' => true,
-			'force_activation'   => true,
+			'required' => false,
+			'force_activation'   => false,
 		),
 		array(
 			'name'             => 'Advanced Custom Fields: Font Awesome',
@@ -84,8 +86,8 @@ function stanlee_register_required_plugins() {
 		array(
 			'name'             => 'Contact Form 7',
 			'slug'             => 'contact-form-7',
-			'required'         => true,
-			'force_activation' => true,
+			'required'         => false,
+			'force_activation' => false,
 		),
 		array(
 			'name'               => 'WP Pusher',                                              // The plugin name.
@@ -151,5 +153,5 @@ function stanlee_register_required_plugins() {
 		'message'      => '',                        // Message to output right before the plugins table.
 	);
 
-	tgmpa( $plugins, $config );
+	tgmpa($plugins, $config);
 }

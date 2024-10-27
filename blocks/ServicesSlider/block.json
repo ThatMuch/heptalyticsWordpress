@@ -5,7 +5,6 @@
 	"style": [
 		"file:./style.css"
 	],
-	"script": "file:./script.js",
 	"category": "theme",
 	"keywords": [
 		"Heptalytics",

@@ -15,26 +15,9 @@ $icon = '<svg width="89" height="84" viewBox="0 0 89 84" fill="none" xmlns="http
 <path d="M24.6097 31.3818C36.7889 24.7946 51.5153 24.6523 63.7714 30.8239C63.0132 18.1789 55.4486 6.87179 43.6426 0.967745L43.7967 0.683075L9.09553 16.7441L0.32251 53.6885L4.38026 58.5792C6.54834 47.2038 13.8286 37.2062 24.6038 31.3818H24.6097Z" fill="#3C98ED"/>
 <path d="M27.181 33.9268C27.4594 46.2928 34.2895 57.6341 45.2958 64.005C56.2191 57.8504 63.1498 46.8508 63.7837 34.7352C52.5464 28.3586 38.6967 28.0512 27.181 33.9211V33.9268Z" fill="#FF7253"/>
 </svg>';
-register_block_type(
-	get_template_directory() . '/blocks/hero-section/block.json',
-	array(
-		'icon'  => $icon,
-	),
-);
-register_block_type(
-	get_template_directory() . '/blocks/section/block.json',
-	array(
-		'icon'  => $icon,
-	),
-);
+
 register_block_type(
 	get_template_directory() . '/blocks/Testimonials/block.json',
-	array(
-		'icon'  => $icon,
-	),
-);
-register_block_type(
-	get_template_directory() . '/blocks/service/block.json',
 	array(
 		'icon'  => $icon,
 	),
@@ -47,64 +30,6 @@ register_block_type(
 );
 register_block_type(
 	get_template_directory() . '/blocks/link/block.json',
-	array(
-		'icon'  => $icon,
-	),
-);
-// register_block_type(
-// 	get_template_directory() . '/blocks/community/block.json',
-// 	array(
-// 		'icon'  => $icon,
-// 	),
-// );
-register_block_type(
-	get_template_directory() . '/blocks/widgetSidebar/block.json',
-	array(
-		'icon'  => $icon,
-	),
-);
-register_block_type(
-	get_template_directory() . '/blocks/serviceSection1/block.json',
-	array(
-		'icon'  => $icon,
-	),
-);
-register_block_type(
-	get_template_directory() . '/blocks/serviceSection2/block.json',
-	array(
-		'icon'  => $icon,
-	),
-);
-register_block_type(
-	get_template_directory() . '/blocks/steps/block.json',
-	array(
-		'icon'  => $icon,
-	),
-);
-
-register_block_type(
-	get_template_directory() . '/blocks/Offers/block.json',
-	array(
-		'icon'  => $icon,
-	),
-);
-
-register_block_type(
-	get_template_directory() . '/blocks/Reviews/block.json',
-	array(
-		'icon'  => $icon,
-	),
-);
-
-register_block_type(
-	get_template_directory() . '/blocks/DatasList/block.json',
-	array(
-		'icon'  => $icon,
-	),
-);
-
-register_block_type(
-	get_template_directory() . '/blocks/ListCards/block.json',
 	array(
 		'icon'  => $icon,
 	),
@@ -116,69 +41,7 @@ register_block_type(
 	),
 );
 register_block_type(
-	get_template_directory() . '/blocks/section/block.json',
-	array(
-		'icon'  => $icon,
-	),
-);
-register_block_type(
-	get_template_directory() . '/blocks/temoignage/block.json',
-	array(
-		'icon'  => $icon,
-	),
-);
-register_block_type(
-	get_template_directory() . '/blocks/service/block.json',
-	array(
-		'icon'  => $icon,
-	),
-);
-register_block_type(
-	get_template_directory() . '/blocks/logos/block.json',
-	array(
-		'icon'  => $icon,
-	),
-);
-register_block_type(
-	get_template_directory() . '/blocks/link/block.json',
-	array(
-		'icon'  => $icon,
-	),
-);
-register_block_type(
-	get_template_directory() . '/blocks/community/block.json',
-	array(
-		'icon'  => $icon,
-	),
-);
-register_block_type(
-	get_template_directory() . '/blocks/widgetSidebar/block.json',
-	array(
-		'icon'  => $icon,
-	),
-);
-
-register_block_type(
-	get_template_directory() . '/blocks/steps/block.json',
-	array(
-		'icon'  => $icon,
-	),
-);
-register_block_type(
-	get_template_directory() . '/blocks/tarif/block.json',
-	array(
-		'icon'  => $icon,
-	),
-);
-
-register_block_type(
 	get_template_directory() . '/blocks/Faq/block.json',
-	array(
-		'icon'  => $icon,
-	),
-);
-register_block_type(
-	get_template_directory() . '/blocks/Video/block.json',
 	array(
 		'icon'  => $icon,
 	),

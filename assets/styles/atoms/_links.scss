@@ -15,3 +15,7 @@ a {
         color: $a__hovercolor;
     }
 }
+
+a:where(:not(.wp-element-button)) {
+    text-decoration: $a__textdecoration;
+}

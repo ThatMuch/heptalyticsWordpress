@@ -9,7 +9,7 @@
 a {
     transition: $transition_fast;
     color: $a__linkcolor;
-    text-decoration: $a__textdecoration;
+    text-decoration: $a__textdecoration !important;
 
     &:hover {
         color: $a__hovercolor;

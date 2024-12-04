@@ -1,8 +1,0 @@
-<wpml-config>
-    <admin-texts>
-        <key name="theme_mods_felipeelia">
-            <key name="header_title" />
-			<key name="header_description" />
-        </key>
-    </admin-texts>
-</wpml-config>

@@ -177,6 +177,9 @@
 	if ($(".wpml-ls-item")) {
 		const lsItem = document.querySelector(".wpml-ls-item");
 		const langSwitcher = document.querySelector(".wpml-ls-item .nav-link");
+		// only keep the 2 first letters of the language
+		langSwitcher.innerText.slice(0,2);
+
 		// move it right after the button btn__primary on mobile
 		$(lsItem).insertAfter("#headerCta");
 		$(".wpml-ls-item .dropdown-menu").insertAfter("#headerCta");

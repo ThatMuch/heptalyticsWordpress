@@ -176,13 +176,19 @@
 
 	if ($(".wpml-ls-item")) {
 		const lsItem = document.querySelector(".wpml-ls-item");
+		const navLink = document.querySelector(".wpml-ls-item .nav-link");
 		const langSwitcherText = document.querySelector(".wpml-ls-item .nav-link .wpml-ls-display");
-		console.log(langSwitcherText.innerText);
+
 		// only keep the 2 first letters of the language
 		const text = langSwitcherText.innerText.slice(0,2);
-		console.log(text)
 		langSwitcherText.innerText = text;
-			console.log(langSwitcherText.innerText);
+
+		document.addEventListener("click",function (e) {
+			if (e.target === navLink) {
+				$(".wpml-ls-item .dropdown-menu").toggleClass("show");
+			}
+		}
+		);
 
 		// move it right after the button btn__primary on mobile
 		$(lsItem).insertAfter("#headerCta");

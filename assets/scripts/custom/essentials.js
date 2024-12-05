@@ -174,11 +174,13 @@
 		$(this).removeClass('wp-block-file__button wp-element-button').addClass('btn btn__orange blue');
 	});
 
-	if ($(".wpml-ls-item .nav-link")) {
+	if ($(".wpml-ls-item")) {
+		const lsItem = document.querySelector(".wpml-ls-item");
 		const langSwitcher = document.querySelector(".wpml-ls-item .nav-link");
 		// move it right after the button btn__primary on mobile
-		$(langSwitcher).insertAfter("#headerCta");
+		$(lsItem).insertAfter("#headerCta");
 		$(".wpml-ls-item .dropdown-menu").insertAfter("#headerCta");
+
     }
 
 	//==================================================================================

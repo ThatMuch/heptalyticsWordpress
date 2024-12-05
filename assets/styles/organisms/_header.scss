@@ -123,18 +123,19 @@ li.menu-item-gtranslate {
     }
 
     .dropdown-menu {
+        display: none;
         position: relative;
         -webkit-transform: none;
         transform: none;
         margin: 0;
-        -webkit-box-shadow: 0 0 0;
-        box-shadow: 0 0 0;
         border: 0;
-        border-radius: 16px;
-        background: transparent;
+        border-radius: 7px;
         background: $color-light;
-        padding: 10px 26px;
+        padding: 1rem;
         min-width: auto;
+        &.show {
+            display: block;
+        }
         &::before {
             display: none;
             @include breakpoint(laptop) {
@@ -150,58 +151,17 @@ li.menu-item-gtranslate {
                 content: "";
             }
         }
-
-        @include breakpoint(laptop) {
-            top: 54px;
-            -webkit-transform: translate(-25%, 13px);
-            transform: translate(-29.5%, 13px);
-            -webkit-box-shadow: 0px 16px 32px rgba(25, 86, 168, 0.1);
-            box-shadow: 0px 16px 32px rgba(25, 86, 168, 0.1);
-            padding: 1.25rem;
-        }
-        &__item {
-            height: 100%;
-            h2 {
-                background: linear-gradient(278.49deg, #1956a8 0%, #171c60 88.22%);
-                -webkit-background-clip: text;
-                -webkit-text-fill-color: transparent;
-                margin: 0 0 10px;
-                background-clip: text;
-                font-size: 0.85rem;
-                text-transform: uppercase;
-            }
-            ul {
-                margin: 0;
-                padding: 0;
-                list-style: none;
-            }
-
-            ul li a {
-                display: inline-block;
-                -webkit-transition: 0.2s;
-                transition: 0.2s;
-                margin: 12px 0;
-
-                font-size: 0.85rem;
-                font-family: $text-ff;
-                letter-spacing: 0.5px;
-                text-decoration: none;
-                &:hover {
-                    color: var(--orange);
-                }
-            }
-        }
     }
 
     .dropdown-item {
         margin-bottom: 1rem;
         padding: 0;
-        color: $color-tertiary;
+        color: $color-primary;
         font-family: $text-ff;
         &:hover,
         &.active {
             cursor: pointer;
-            background-color: $color-light;
+            background-color: $color-primary-darker;
         }
     }
 

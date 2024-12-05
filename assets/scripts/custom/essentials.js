@@ -177,7 +177,7 @@
 	if ($(".wpml-ls-item")) {
 		// const lsItem = document.querySelector(".wpml-ls-item");
 		// const navLink = document.querySelector(".wpml-ls-item .nav-link");
-		const langSwitcherText = document.querySelector(".wpml-ls-item .wpml-ls-display");
+		const langSwitcherText = document.querySelector(".wpml-ls-item .wpml-ls-native");
 
 		// only keep the 2 first letters of the language
 		const text = langSwitcherText.innerText.slice(0,2);

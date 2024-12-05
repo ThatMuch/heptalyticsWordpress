@@ -65,6 +65,7 @@ $template = str_replace(array('page-', '.php'), '', $template);
 				<a id="headerCta" href="<?php echo get_theme_mod('header_button_link', '#') ?>" class="btn btn__primary">
 					<?php echo get_theme_mod('header_button_text', 'Demander une démo') ?>
 				</a>
+				<?php do_action('wpml_footer_language_selector'); ?>
 				<input type="checkbox">
 				<button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
 					<div class="bar"></div>

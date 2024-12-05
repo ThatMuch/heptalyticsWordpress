@@ -15,6 +15,9 @@
 }
 .menu-item {
     cursor: pointer;
+    &::marker {
+        display: none;
+    }
 }
 li.menu-item-gtranslate {
     img {

@@ -174,27 +174,27 @@
 		$(this).removeClass('wp-block-file__button wp-element-button').addClass('btn btn__orange blue');
 	});
 
-	if ($(".wpml-ls-item")) {
-		const lsItem = document.querySelector(".wpml-ls-item");
-		const navLink = document.querySelector(".wpml-ls-item .nav-link");
-		const langSwitcherText = document.querySelector(".wpml-ls-item .nav-link .wpml-ls-display");
+	// if ($(".wpml-ls-item")) {
+	// 	const lsItem = document.querySelector(".wpml-ls-item");
+	// 	const navLink = document.querySelector(".wpml-ls-item .nav-link");
+	// 	const langSwitcherText = document.querySelector(".wpml-ls-item .nav-link .wpml-ls-display");
 
-		// only keep the 2 first letters of the language
-		const text = langSwitcherText.innerText.slice(0,2);
-		langSwitcherText.innerText = text;
+	// 	// only keep the 2 first letters of the language
+	// 	const text = langSwitcherText.innerText.slice(0,2);
+	// 	langSwitcherText.innerText = text;
 
-		document.addEventListener("click",function (e) {
-			if (e.target === navLink) {
-				$(".wpml-ls-item .dropdown-menu").toggleClass("show");
-			}
-		}
-		);
+	// 	document.addEventListener("click",function (e) {
+	// 		if (e.target === navLink) {
+	// 			$(".wpml-ls-item .dropdown-menu").toggleClass("show");
+	// 		}
+	// 	}
+	// 	);
 
-		// move it right after the button btn__primary on mobile
-		$(lsItem).insertAfter("#headerCta");
-		$(".wpml-ls-item .dropdown-menu").insertAfter("#headerCta");
+	// 	// move it right after the button btn__primary on mobile
+	// 	$(lsItem).insertAfter("#headerCta");
+	// 	$(".wpml-ls-item .dropdown-menu").insertAfter("#headerCta");
 
-    }
+    // }
 
 	//==================================================================================
 	// Initialization

@@ -207,6 +207,7 @@
     }
 
     .wpml-ls-legacy-list-vertical.wpml-ls-statics-footer {
+        display: block;
         margin-bottom: 0;
         a.wpml-ls-link {
             background-color: #131327;
@@ -214,4 +215,8 @@
             text-transform: uppercase;
         }
     }
+}
+
+.wpml-ls-statics-footer {
+    display: none;
 }

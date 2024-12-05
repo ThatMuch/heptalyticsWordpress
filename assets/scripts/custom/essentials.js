@@ -177,8 +177,6 @@
 	if ($(".wpml-ls-item")) {
 		const lsItem = document.querySelector(".wpml-ls-item");
 		const langSwitcher = document.querySelector(".wpml-ls-item .nav-link");
-		// remove the list ::marker before the language switcher
-		lsItem.style.listStyleType = "none";
 		// only keep the 2 first letters of the language
 		langSwitcher.innerText.slice(0,2);
 

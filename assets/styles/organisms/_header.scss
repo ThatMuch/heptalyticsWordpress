@@ -205,4 +205,13 @@
             box-shadow: none;
         }
     }
+
+    .wpml-ls-legacy-list-vertical.wpml-ls-statics-footer {
+        margin-bottom: 0;
+        a {
+            background-color: transparent;
+            color: #fff;
+            text-transform: uppercase;
+        }
+    }
 }

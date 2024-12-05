@@ -14,6 +14,7 @@
     }
 }
 .menu-item {
+    position: relative;
     cursor: pointer;
     list-style: none;
 }
@@ -82,6 +83,9 @@
         letter-spacing: 0.5px;
         text-transform: uppercase;
         &.active {
+            color: $color-primary;
+        }
+        &.show {
             color: $color-primary;
         }
         &.lang__switcher {

@@ -120,10 +120,10 @@
         }
     }
 
-    .dropdown-toggle {
+    .dropdown {
         position: relative;
         &::after {
-            display: inline-block;
+            display: block;
             position: absolute;
             vertical-align: 2px;
             -webkit-transition: 0.2s;
@@ -135,12 +135,6 @@
             padding: 3px;
             width: 10px;
             height: 6px;
-        }
-        &.show {
-            &::after {
-                -webkit-transform: rotate(180deg);
-                transform: rotate(180deg);
-            }
         }
     }
 

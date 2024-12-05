@@ -180,6 +180,7 @@
 		console.log(langSwitcherText.innerText);
 		// only keep the 2 first letters of the language
 		const text = langSwitcherText.innerText.slice(0,2);
+		console.log(text)
 		langSwitcherText.innerText = text;
 			console.log(langSwitcherText.innerText);
 

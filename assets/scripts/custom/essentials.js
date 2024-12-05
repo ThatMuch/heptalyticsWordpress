@@ -174,15 +174,11 @@
 		$(this).removeClass('wp-block-file__button wp-element-button').addClass('btn btn__orange blue');
 	});
 
-	if ($(".wpml-ls-item a")) {
-        $(".wpml-ls-item a").each(function () {
-            // move it right after the button btn__primary on mobile
-			$(this).insertAfter("#headerCta");
-			$(".wpml-ls-item .dropdown-menu").insertAfter("#headerCta");;
-
-            // add class to the language switcher
-            //$(this).addClass("lang__switcher");
-        });
+	if ($(".wpml-ls-item .nav-link")) {
+		const langSwitcher = document.querySelector(".wpml-ls-item .nav-link");
+		// move it right after the button btn__primary on mobile
+		$(langSwitcher).insertAfter("#headerCta");
+		$(".wpml-ls-item .dropdown-menu").insertAfter("#headerCta");
     }
 
 	//==================================================================================

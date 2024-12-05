@@ -125,6 +125,7 @@
         &::after {
             display: block;
             position: absolute;
+            right: -10px;
             vertical-align: 2px;
             transform: rotate(45deg);
             -webkit-transform: rotate(45deg);
@@ -136,6 +137,9 @@
             border-width: 0 1px 1px 0;
             padding: 3px;
             content: "";
+        }
+        &.show::after {
+            border: solid $color-primary;
         }
     }
 

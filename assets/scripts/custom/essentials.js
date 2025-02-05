@@ -89,6 +89,14 @@
                 items: 1,
             },
         },
+        onInitialized: function (event) {
+            const $carousel = $(event?.target);
+            initializeCarouselA11y($carousel); // Call initialization function
+        },
+        onTranslated: function (event) {
+            const $carousel = $(event?.target);
+            updateCarouselA11y($carousel); // Call update function
+        },
     });
 	$(".statsSlider__list").owlCarousel({
         margin: 15,

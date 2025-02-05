@@ -34,7 +34,7 @@ $post_id = get_the_ID();
 					<div class="metrics__list">
 						<?php foreach ($data["metrics"] as $metric): ?>
 							<div class="metric__card">
-								<h3 class="metric__card__title"><?php echo $metric['metric'] ?></h3>
+								<h2 class="metric__card__title h3"><?php echo $metric['metric'] ?></h2>
 								<div><?php echo $metric["text"] ?></div>
 							</div>
 						<?php endforeach; ?>
@@ -54,7 +54,7 @@ $post_id = get_the_ID();
 						<div class="col-sm-9">
 							<div class="content">
 								<h2 class="testimonial__title"><?= $data['title'] ?></h2>
-								<h4 class="content__title mb-0"><?php the_title() ?></h4>
+								<h3 class="content__title mb-0 h4"><?php the_title() ?></h3>
 								<div class="content__desc"><?php the_content() ?></div>
 							</div>
 						</div>

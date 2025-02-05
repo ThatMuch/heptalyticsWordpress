@@ -15,7 +15,7 @@ $block_id = $args['block_id'];
 				</div>
 			</div>
 			<div class="col-lg-6">
-				<h4 class="sliderBenefits__feature"><?php echo $data['feature'] ?></h4>
+				<h3 class="sliderBenefits__feature h4"><?php echo $data['feature'] ?></h3>
 				<div class="sliderBenefits__list owl-carousel">
 					<?php foreach ($data['sliders'] as $slider) : ?>
 						<div class="sliderBenefits__item">

@@ -11,8 +11,8 @@ $block_id = $args['block_id'];
 			<div class="col-lg-6">
 				<div class="sliderServices__content">
 					<div>
-						<h4 class="sliderServices__feature mb-0"><?php echo $data['feature'] ?></h4>
-						<h2 class="sliderServices__title"><?php echo $data['title'] ?></h2>
+						<h2 class="sliderServices__feature mb-0 h4"><?php echo $data['feature'] ?></h2>
+						<h3 class="sliderServices__title h2"><?php echo $data['title'] ?></h3>
 					</div>
 					<div class="sliderServices__desc"><?php echo $data['text'] ?></div>
 				</div>

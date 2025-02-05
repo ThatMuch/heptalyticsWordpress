@@ -16,8 +16,8 @@ $block_id = $args['block_id'];
 				?>
 					<div class="pinnedSections__item" id="card<?php echo $index ?>">
 						<div>
-							<h4 class="pinnedSections__feature"><?php echo $layer['feature'] ?></h4>
-							<h2 class="pinnedSections__title"><?php echo $layer['title'] ?></h2>
+							<h2 class="pinnedSections__feature h4"><?php echo $layer['feature'] ?></h2>
+							<h3 class="pinnedSections__title h2"><?php echo $layer['title'] ?></h3>
 							<div class="pinnedSections__desc"><?php echo $layer['text'] ?></div>
 						</div>
 						<img src="<?php echo $layer["image"]["url"] ?>" alt="">

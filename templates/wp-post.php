@@ -7,7 +7,7 @@
 		?>
 		<a href="<?php the_permalink() ?>" class="blog__item__image"
 			aria-label="<?php the_title_attribute(); ?>" aria-labelledby="<?php echo $title_id; ?>"
-			<?php if ($has_excerpt) : ?>aria-describedby="<?php echo $excerpt_id; ?>" <?php endif; ?>
+
 			title="<?php the_title_attribute(); ?>"> <?php the_post_thumbnail('medium'); ?>
 			<?php the_post_thumbnail('medium'); ?>
 		</a>
@@ -25,8 +25,7 @@
 				</div>
 			<?php endif; ?>
 			<a href="<?php the_permalink() ?>">
-				<h3><?php the_title(); ?></h3>
+				<h3 id="<?php echo $title_id; ?>"><?php the_title(); ?></h3>
 			</a>
-
 		</div>
 	</div>

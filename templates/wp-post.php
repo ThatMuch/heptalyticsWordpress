@@ -7,8 +7,7 @@
 		?>
 		<a href="<?php the_permalink() ?>" class="blog__item__image"
 			aria-label="<?php the_title_attribute(); ?>" aria-labelledby="<?php echo $title_id; ?>"
-
-			title="<?php the_title_attribute(); ?>"> <?php the_post_thumbnail('medium'); ?>
+			title="<?php the_title_attribute(); ?>">
 			<?php the_post_thumbnail('medium'); ?>
 		</a>
 		<div class="blog__item__content">

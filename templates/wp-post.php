@@ -3,10 +3,11 @@
 		<?php
 		$title_id = 'blog-title-' . get_the_ID(); // Unique ID for the title
 		$excerpt_id = 'blog-excerpt-' . get_the_ID(); // Unique ID for the excerpt
+		$has_excerpt = has_excerpt();
 		?>
 		<a href="<?php the_permalink() ?>" class="blog__item__image"
 			aria-label="<?php the_title_attribute(); ?>" aria-labelledby="<?php echo $title_id; ?>"
-			aria-describedby="<?php echo $excerpt_id; ?>"
+			<?php if ($has_excerpt) : ?>aria-describedby="<?php echo $excerpt_id; ?>" <?php endif; ?>
 			title="<?php the_title_attribute(); ?>"> <?php the_post_thumbnail('medium'); ?>
 			<?php the_post_thumbnail('medium'); ?>
 		</a>

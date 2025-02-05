@@ -1,10 +1,13 @@
 	<?php $categories = get_the_category(); ?>
 	<div class="blog__item">
+		<?php
+		$title_id = 'blog-title-' . get_the_ID(); // Unique ID for the title
+		$excerpt_id = 'blog-excerpt-' . get_the_ID(); // Unique ID for the excerpt
+		?>
 		<a href="<?php the_permalink() ?>" class="blog__item__image"
-			aria-label="<?php the_title(); ?>"
-			aria-labelledby="<?php the_title(); ?>"
-			aria-describedby="<?php the_excerpt(); ?>"
-			title="<?php the_title(); ?>">
+			aria-label="<?php the_title_attribute(); ?>" aria-labelledby="<?php echo $title_id; ?>"
+			aria-describedby="<?php echo $excerpt_id; ?>"
+			title="<?php the_title_attribute(); ?>"> <?php the_post_thumbnail('medium'); ?>
 			<?php the_post_thumbnail('medium'); ?>
 		</a>
 		<div class="blog__item__content">

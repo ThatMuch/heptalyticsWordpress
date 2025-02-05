@@ -9,6 +9,7 @@
 .badge {
     border-radius: var(--8, 0.5rem);
     padding: var(--8, 0.5rem) var(--16, 1rem);
+    font-size: 0.9rem;
     text-transform: uppercase;
     &-light {
         background: $color-primary-lightest;

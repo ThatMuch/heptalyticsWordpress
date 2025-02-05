@@ -13,9 +13,17 @@ $argsAll = array(
 	'post_type' => 'post',
 	'posts_per_page' => $total_posts - $exclude_posts,
 	'category_name' => $term->slug,
-	'offset' => $exclude_posts
+	'offset' => 1
 );
 $queryAll = new WP_Query($argsAll);
+
+// query to select just the first post
+$argsFirst = array(
+	'posts_per_page' => 1,
+	'category_name' => $term->slug
+);
+$queryFirst = new WP_Query($argsFirst);
+
 
 ?>
 <?php get_header(); ?>
@@ -23,35 +31,32 @@ $queryAll = new WP_Query($argsAll);
 	<main id="blog">
 		<div class="container">
 			<div class="row g-3">
-				<div class="col-lg-4">
+				<div class="col-lg-5">
 					<div class="blog__left">
 						<div class="blog__box
 						<?php echo
 						$term->slug === "professionnel" ?
 							'dark' : ($term->slug === "temoignage" ? 'orange' : ''); ?>">
-							<h2><?php single_cat_title(); ?></h2>
+							<h1 class="h2 text-white"><?php single_cat_title(); ?></h1>
 							<?php
-
 							echo $category_description;
 							?>
 						</div>
 					</div>
 				</div>
-				<div class="col-lg-8">
-					<div class="blog__list owl-carousel">
-						<?php if ($the_query->have_posts()) : ?>
-							<?php while ($the_query->have_posts()) : $the_query->the_post(); ?>
-								<?php get_template_part('templates/wp', 'post'); ?>
-							<?php endwhile; ?>
-							<?php wp_reset_postdata(); ?>
-						<?php endif; ?>
-					</div> <!-- end blog list -->
+				<div class="col-lg-7">
+					<?php if ($queryFirst->have_posts()) : ?>
+						<?php while ($queryFirst->have_posts()) : $queryFirst->the_post(); ?>
+							<?php get_template_part('templates/wp', 'post'); ?>
+						<?php endwhile; ?>
+						<?php wp_reset_postdata(); ?>
+					<?php endif; ?>
 				</div>
 			</div>
 			<div class="row">
 				<?php if ($queryAll->have_posts()) : ?>
 					<?php while ($queryAll->have_posts()) : $queryAll->the_post(); ?>
-						<div class="col-md-3">
+						<div class="col-md-4">
 							<?php get_template_part('templates/wp', 'post'); ?>
 						</div>
 					<?php endwhile; ?>

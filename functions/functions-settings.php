@@ -74,7 +74,6 @@ function heptalytics_enqueue()
   //wp_enqueue_script('wp-bootstrap-starter-themejs', get_template_directory_uri() . '/inc/assets/js/theme-script.min.js', array(), '', true);
   //wp_enqueue_script('wp-bootstrap-starter-skip-link-focus-fix', get_template_directory_uri() . '/inc/assets/js/skip-link-focus-fix.min.js', array(), '20151215', true);
   wp_enqueue_script('owl-carousel', get_template_directory_uri() . '/inc/assets/js/owl.carousel.min.js', array(), '', true);
-  wp_enqueue_script('owl-carousel-a11y', get_template_directory_uri() . '/inc/assets/js/owlcarousel-a11y.js', array(), '', true);
 }
 function theme_gsap_script()
 {

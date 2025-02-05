@@ -20,7 +20,7 @@ $template = str_replace(array('page-', '.php'), '', $template);
 	<?php dynamic_sidebar('footer-1'); ?>
 <?php endif; ?>
 
-</div><!-- #content -->
+</main><!-- #content -->
 
 </div>
 <div class="footer__area">

@@ -159,4 +159,4 @@ $template = str_replace(array('page-', '.php'), '', $template);
 			</h1>
 		</header>
 	<?php endif; ?>
-	<div id="content" class="section__area">
+	<main id="content" class="section__area">

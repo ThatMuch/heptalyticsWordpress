@@ -23,7 +23,7 @@ $template = str_replace(array('page-', '.php'), '', $template);
 </main><!-- #content -->
 
 </div>
-<div class="footer__area">
+<footer class="footer__area">
 	<div class="footer__area__menu d-md-flex  justify-content-<?php echo $template !== "landing" ? "between" : "center" ?> align-items-center">
 		<div class="col-sm-3">
 			<img class="footer__area__logo" data-src="<?php if ($image[0]) : echo $image[0];
@@ -84,7 +84,7 @@ $template = str_replace(array('page-', '.php'), '', $template);
 			<?php endif; ?>
 		</div>
 	</div>
-</div>
+</footer>
 <script>
 	if (typeof ScrollTrigger !== 'undefined') {
 		// if browser is Safari

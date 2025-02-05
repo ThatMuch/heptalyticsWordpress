@@ -11,12 +11,13 @@ $template = get_page_template_slug();
 $template = str_replace(array('page-', '.php'), '', $template);
 ?>
 <!DOCTYPE html>
-<html <?php language_attributes(); ?>>
+<html <?php language_attributes(); ?> lang="fr">
 
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=5, initial-scale=1">
 	<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
+
 	<?php heptalytics_gtm('head') ?>
 	<!--=== OPEN-GRAPH TAGS ===-->
 	<?php heptalytics_ogtags() ?>

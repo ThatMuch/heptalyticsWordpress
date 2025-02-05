@@ -16,9 +16,8 @@ $data = $args['data'];
 				<h2 class="mb-0"><?php echo $data['title']
 									?></h2>
 				<a href="<?php
-
 							echo get_permalink(get_option('page_for_posts'));
-							?>" class="btn btn__light d-block">See all the news</a>
+							?>" class="btn btn__white d-block">See all the news</a>
 			</div>
 			<div class="blog__list">
 				<?php while ($the_query->have_posts()) : $the_query->the_post(); ?>

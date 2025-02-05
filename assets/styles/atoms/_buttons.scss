@@ -30,7 +30,7 @@
 
     &.btn__primary {
         background: $color-primary;
-        color: #fff;
+        color: $color-black;
 
         img {
             -webkit-filter: brightness(100);
@@ -42,7 +42,7 @@
         &:active,
         &:focus {
             background-color: $color-primary-darker;
-            color: #fff;
+            color: $color-black;
         }
     }
 }
@@ -50,7 +50,7 @@
 .woocommerce:where(body:not(.woocommerce-block-theme-has-button-styles)) button.button.alt,
 body:not(.woocommerce-block-theme-has-button-styles) .wc-block-components-button:not(.is-link) {
     background-color: $color-primary;
-    color: #fff;
+    color: $color-black;
 
     img {
         -webkit-filter: brightness(100);
@@ -62,7 +62,7 @@ body:not(.woocommerce-block-theme-has-button-styles) .wc-block-components-button
     &:active,
     &:focus {
         background-color: $color-primary-darker;
-        color: #fff;
+        color: $color-black;
     }
 }
 
@@ -73,7 +73,7 @@ body:not(.woocommerce-block-theme-has-button-styles) .wc-block-components-button
     border-radius: 7px;
     background: #ffffff;
     padding: 10px 15px;
-    color: $color-primary;
+    color: $color-primary-darkest;
     font-weight: 700;
     font-family: $text-ff;
     letter-spacing: 0.5px;
@@ -89,7 +89,7 @@ body:not(.woocommerce-block-theme-has-button-styles) .wc-block-components-button
     }
     &:hover {
         background: $color-primary;
-        color: #fff;
+        color: $color-black;
         img {
             -webkit-filter: brightness(10);
             filter: brightness(10);

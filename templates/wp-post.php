@@ -1,6 +1,10 @@
 	<?php $categories = get_the_category(); ?>
 	<div class="blog__item">
-		<a href="<?php the_permalink() ?>" class="blog__item__image">
+		<a href="<?php the_permalink() ?>" class="blog__item__image"
+			aria-label="<?php the_title(); ?>"
+			aria-labelledby="<?php the_title(); ?>"
+			aria-describedby="<?php the_excerpt(); ?>"
+			title="<?php the_title(); ?>">
 			<?php the_post_thumbnail('medium'); ?>
 		</a>
 		<div class="blog__item__content">

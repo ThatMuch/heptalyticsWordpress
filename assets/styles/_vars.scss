@@ -31,7 +31,9 @@ $element_width_mobile: 95vw; // default width of the .element content-div
 /––––––––––––––––––––––––*/
 $color-primary: #3c98ed;
 $color-primary-darker: color.adjust($color-primary, $lightness: -7%);
+$color-primary-darkest: #004d93;
 $color-primary-lighter: color.adjust($color-primary, $lightness: 7%);
+$color-primary-lightest: color.adjust($color-primary, $lightness: 35%);
 $color-secondary: #ff7253;
 $color-secondary-darker: color.adjust($color-secondary, $lightness: -7%);
 $color-tertiary: #7ad6c6;

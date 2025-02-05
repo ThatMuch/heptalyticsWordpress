@@ -67,8 +67,8 @@ $template = str_replace(array('page-', '.php'), '', $template);
 					<?php echo get_theme_mod('header_button_text', 'Demander une démo') ?>
 				</a>
 				<?php do_action('wpml_footer_language_selector'); ?>
-				<input type="checkbox">
-				<button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+				<button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Main Navigation">
+					<span class="visually-hidden">Main Navigation</span>
 					<div class="bar"></div>
 					<div class="bar"></div>
 					<div class="bar"></div>

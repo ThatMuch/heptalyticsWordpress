@@ -17,7 +17,7 @@ $template = str_replace(array('page-', '.php'), '', $template);
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=5, initial-scale=1">
 	<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
-
+	<script async src="https://tally.so/widgets/embed.js"></script>
 	<?php heptalytics_gtm('head') ?>
 	<!--=== OPEN-GRAPH TAGS ===-->
 	<?php heptalytics_ogtags() ?>
